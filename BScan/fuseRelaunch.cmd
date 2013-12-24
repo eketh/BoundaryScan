@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/!DYPLOM/BScan/Top_test_isim_beh.exe" -prj "C:/!DYPLOM/BScan/Top_test_beh.prj" "work.Top_test" 
