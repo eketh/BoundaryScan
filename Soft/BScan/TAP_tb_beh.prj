@@ -1,0 +1,2 @@
+vhdl work "boundary_scan_device.vhd"
+vhdl work "TAP_tb.vhd"

@@ -1,0 +1,31 @@
+Command line:
+   STMTest_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49998
+
+Sun Dec 29 14:20:11 2013
+
+
+ Elaboration Time: 0.202802 sec
+
+ Current Memory Usage: 1473.02 Meg
+
+ Total Signals          : 23
+ Total Nets             : 18
+ Total Signal Drivers   : 15
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 7
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 417
+Total Line Count : 64
+In process STMTest.vhd:BitShift 
+ 
+
+ Total Simulation Time: 0.374403 sec
+
+ Current Memory Usage: 1473.02 Meg
+
+Sun Dec 29 14:20:27 2013
+

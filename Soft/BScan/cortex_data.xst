@@ -1,0 +1,5 @@
+set -tmpdir "C:/!DYPLOM/BScan/xst/projnav.tmp"
+set -xsthdpdir "C:/!DYPLOM/BScan/xst"
+elaborate
+-ifn cortex_data.prj
+-ifmt mixed

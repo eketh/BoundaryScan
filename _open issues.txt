@@ -1,0 +1,27 @@
+*******************************************************************************************************************
+*******************************************************TODO********************************************************
+*******************************************************************************************************************
+29 XII 2013
+
+1) Change the board for Spartan 3E. Spartan was cool.
+
+2) Update theoretical introduction with the following chapters:
+
+* Testing methods different than BST (hard to write with no internet connection)
+* Boundary Scan Cell (first subchapter of the IEEE 1149.1 chapter) - DONE
+* Boundary Scan Description Language - last part of the IEEE 1149.1 chapter - basing on BSjhhong0209.pdf OR standards
+
+
+*******************************************************************************************************************
+****************************************************OPEN ISSUES****************************************************
+*******************************************************************************************************************
+
+LEGEND
+@ - issue
+# - where I found the solution
+
+29 XII 2013
+ 1) @STM32 JTAG: how can we update only one instruction, i.e. only Cortex instruction, without changing instruction for the second component?
+ 2) @BSC: EXACT STRUCTURE (incl. exact structure in STM32F4) - imho description in standard isn't strict here
+ 3) @SPARTAN 3E: how should I handle LCD display easily?
+ 4) @TAP: what exactly happens in CAPTURE state? -> #BSjhhong0209.pdf (ta prezentacja jest bardzo dobra + poszczegolne testy sa w niej dobrze opisane. BSDL tez!)

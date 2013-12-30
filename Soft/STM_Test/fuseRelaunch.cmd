@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/!DYPLOM-stare/STM_Test/STMTest_tb_isim_beh.exe" -prj "C:/!DYPLOM-stare/STM_Test/STMTest_tb_beh.prj" "work.STMTest_tb" 

@@ -1,0 +1,4 @@
+work	"InstructionRegister.vhd"
+work	"JTAGTop.vhd"
+work	"boundary_scan_device.vhd"
+work	"bscell.vhd"

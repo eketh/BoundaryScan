@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/!DYPLOM/BScan/Top_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/top_test/zagloba/tck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tck</obj_property>
+      <obj_property name="ObjectShortName">tck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/tms" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tms</obj_property>
+      <obj_property name="ObjectShortName">tms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/tdi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tdi</obj_property>
+      <obj_property name="ObjectShortName">tdi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/tdo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tdo</obj_property>
+      <obj_property name="ObjectShortName">tdo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/treset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">treset</obj_property>
+      <obj_property name="ObjectShortName">treset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/clockir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clockir</obj_property>
+      <obj_property name="ObjectShortName">clockir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/shiftir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">shiftir</obj_property>
+      <obj_property name="ObjectShortName">shiftir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/updateir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">updateir</obj_property>
+      <obj_property name="ObjectShortName">updateir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/clockdr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clockdr</obj_property>
+      <obj_property name="ObjectShortName">clockdr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/updatedr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">updatedr</obj_property>
+      <obj_property name="ObjectShortName">updatedr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/tselect" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tselect</obj_property>
+      <obj_property name="ObjectShortName">tselect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmTAP/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmInstrDataRegister/instructionshift" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instructionshift[7:0]</obj_property>
+      <obj_property name="ObjectShortName">instructionshift[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmInstrDataRegister/currentinstruction" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentinstruction[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentinstruction[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmInstrDataRegister/decodedinstruction" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">decodedinstruction</obj_property>
+      <obj_property name="ObjectShortName">decodedinstruction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmInstrDataRegister/instrchange" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">instrchange</obj_property>
+      <obj_property name="ObjectShortName">instrchange</obj_property>
+   </wvobject>
+</wave_config>

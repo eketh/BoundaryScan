@@ -1,0 +1,3 @@
+vhdl work "C:\!DYPLOM\BScan\CortexIDRegister.vhd"
+vhdl work "C:\!DYPLOM\BScan\boundary_scan_device.vhd"
+vhdl work "C:\!DYPLOM\BScan\Top.vhd"

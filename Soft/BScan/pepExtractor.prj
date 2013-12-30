@@ -1,0 +1,3 @@
+work	"InstructionRegister.vhd"
+work	"Top.vhd"
+work	"boundary_scan_device.vhd"

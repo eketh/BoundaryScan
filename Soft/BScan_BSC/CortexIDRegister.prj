@@ -1,0 +1,2 @@
+vhdl work "cortex_data.vhd"
+vhdl work "CortexIDRegister.vhd"

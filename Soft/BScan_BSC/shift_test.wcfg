@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/!DYPLOM-stare/BScan/JTAGTop_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="jtagtop_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/jtagtop_tb/stdi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stdi</obj_property>
+      <obj_property name="ObjectShortName">stdi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/sndi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sndi</obj_property>
+      <obj_property name="ObjectShortName">sndi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/stms" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stms</obj_property>
+      <obj_property name="ObjectShortName">stms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/stck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stck</obj_property>
+      <obj_property name="ObjectShortName">stck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/stdo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stdo</obj_property>
+      <obj_property name="ObjectShortName">stdo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/sndo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sndo</obj_property>
+      <obj_property name="ObjectShortName">sndo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/smode" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">smode</obj_property>
+      <obj_property name="ObjectShortName">smode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/sreset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sreset</obj_property>
+      <obj_property name="ObjectShortName">sreset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/scantest/bscanTAP/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/scantest/bscanTAP/next_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/jtagtop_tb/scantest/bscanTAP/tck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tck</obj_property>
+      <obj_property name="ObjectShortName">tck</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,3 @@
+vhdl work "CortexIDRegister.vhd"
+vhdl work "boundary_scan_device.vhd"
+vhdl work "Top.vhd"

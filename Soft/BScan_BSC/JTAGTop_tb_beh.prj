@@ -1,0 +1,5 @@
+vhdl work "InstructionRegister.vhd"
+vhdl work "bscell.vhd"
+vhdl work "boundary_scan_device.vhd"
+vhdl work "JTAGTop.vhd"
+vhdl work "JTAGTop_tb.vhd"

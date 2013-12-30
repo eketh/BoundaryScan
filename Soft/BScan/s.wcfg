@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/!DYPLOM/BScan/Top_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="top_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/top_test/tdi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tdi</obj_property>
+      <obj_property name="ObjectShortName">tdi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/tdo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tdo</obj_property>
+      <obj_property name="ObjectShortName">tdo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/tms" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tms</obj_property>
+      <obj_property name="ObjectShortName">tms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/tck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tck</obj_property>
+      <obj_property name="ObjectShortName">tck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_test/zagloba/pmInstrDataRegister/instrchange" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">instrchange</obj_property>
+      <obj_property name="ObjectShortName">instrchange</obj_property>
+   </wvobject>
+</wave_config>

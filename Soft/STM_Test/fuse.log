@@ -1,0 +1,21 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/!DYPLOM-stare/STM_Test/STMTest_tb_isim_beh.exe" -prj "C:/!DYPLOM-stare/STM_Test/STMTest_tb_beh.prj" "work.STMTest_tb" 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/!DYPLOM-stare/STM_Test/STMTest.vhd" into library work
+Parsing VHDL file "C:/!DYPLOM-stare/STM_Test/STMTest_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture stmtest_a of entity STMTest [stmtest_default]
+Compiling architecture behavior of entity stmtest_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 VHDL Units
+Built simulation executable C:/!DYPLOM-stare/STM_Test/STMTest_tb_isim_beh.exe
+Fuse Memory Usage: 34092 KB
+Fuse CPU Usage: 842 ms

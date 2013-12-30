@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/!DYPLOM-stare/BScan/JTAGTop_tb_isim_beh.exe" -prj "C:/!DYPLOM-stare/BScan/JTAGTop_tb_beh.prj" "work.JTAGTop_tb" 

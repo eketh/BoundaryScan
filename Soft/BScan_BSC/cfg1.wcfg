@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Elsik/Desktop/DYPLOM/Boundary_scan/TAP_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="tap_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/tap_tb/tms" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tms</obj_property>
+      <obj_property name="ObjectShortName">tms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/tck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tck</obj_property>
+      <obj_property name="ObjectShortName">tck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/trst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">trst</obj_property>
+      <obj_property name="ObjectShortName">trst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/clockir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clockir</obj_property>
+      <obj_property name="ObjectShortName">clockir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/updateir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">updateir</obj_property>
+      <obj_property name="ObjectShortName">updateir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/shiftir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">shiftir</obj_property>
+      <obj_property name="ObjectShortName">shiftir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/treset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">treset</obj_property>
+      <obj_property name="ObjectShortName">treset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/tselect" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tselect</obj_property>
+      <obj_property name="ObjectShortName">tselect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/shiftdr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">shiftdr</obj_property>
+      <obj_property name="ObjectShortName">shiftdr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/updatedr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">updatedr</obj_property>
+      <obj_property name="ObjectShortName">updatedr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/clockdr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clockdr</obj_property>
+      <obj_property name="ObjectShortName">clockdr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/uut/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tap_tb/uut/next_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,6 @@
+V3 3
+FL C:/!DYPLOM/BScan/cortex_data.vhd 2013/11/17.17:28:39 P.68d
+PH id_cortex_data/cortex_data 1384705806 FL C:/!DYPLOM/BScan/cortex_data.vhd \
+      PB ieee/std_logic_1164 1370735607
+PB id_cortex_data/cortex_data 1384705807 \
+      FL C:/!DYPLOM/BScan/cortex_data.vhd PH id_cortex_data/cortex_data 1384705806
