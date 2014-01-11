@@ -4,15 +4,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
 --**********************************************************************************************************************************************************
--- TODO
--- *dostosowac do jtaga w STM32F4.
--- *dodac wyswietlanie DRData np. na LCDku Spartana 3E, zebysmy wiedzieli, czy w ogóle cos otrzymujemy od ukladu.
--- *w dalekiej przyszlosci: dodac opcje zapisywania pamieci Flash. :)
+-- What was done 11 I 2014:
+-- ??????????????
+-- "Only the DEV_ID(11:0) should be used for identification by the debugger/programmer tools."
 
--- OPEN ISSUES
--- *jak update'owac instrukcje tylko w boundary scanie albo tylko w Corteksie?
+-- INSTRUCTION REGISTER (IRData) LENGTH + VALUE
+-- both SHIFTIR and SHIFTDR data are now 9-bits wide. Higher 5 bits refer to Boundary Scan TAP and
+-- lower 4 bits refer to Cortex-M4 TAP.
+-- Also, we need a value of "11101111" in IRDATA to get JTAG's DevId + "111111110" to get Cortex's DevId.
+-- Not pretty sure about JTAG instruction - it is based on some old BSDL files.
+
+-- Cortex's DevId *should* be equal to 0x4BA00477. *Some* BYP value should be located @ last place.
+-- JTAG's DevId *should* be equal to 0x06413041. *Some* BYP value should be located @ first place.
+-- 
+-- DATA REGISTER (DRData) LENGTH
+-- Right now I assume that everything I need from ST Discovery is to read its DEVID, be it JTAG ID or Cortex-M4 ID. In such case,
+-- DevID is 32-bits long. Adding one bit for one BYPASS value from the second component, there are 33 bits.
+
 --**********************************************************************************************************************************************************
-
 
 
 --**********************************************************************************************************************************************************
@@ -44,6 +53,12 @@ architecture STMTest_a of STMTest is
 type states is (TReset, To_ShiftIR, SHIFTIR, To_ShiftDR, SHIFTDR, To_RunTest, RunTest);
 signal state, next_state: states;
 
+
+signal DRData: std_logic_vector (32 downto 0); -- data received from JTAG
+constant IRData: std_logic_vector (8 downto 0):= "0011"; --Instruction code to be sent to JTAG
+signal bit_count: integer range 4 downto 0; -- showing which bit is actually sent
+
+
 constant SHIFTIRData: std_logic_vector (4 downto 0):= "01100";
 constant SHIFTDRData: std_logic_vector (4 downto 0):= "11100";
 constant RunTestData: std_logic_vector (2 downto 0):="110";
@@ -55,11 +70,9 @@ constant half_prescaler: integer := 3;--24;
 constant shift_prescaler: integer := 3;--12; -- some value "considered safe" where shift register is shifted.
 signal clk_prescaler: integer range max_prescaler downto 0;
 
-signal DRData: std_logic_vector (3 downto 0); -- data received from JTAG
-constant IRData: std_logic_vector (3 downto 0):= "0011"; --Instruction code to be sent to JTAG
-signal bit_count: integer range 4 downto 0; -- showing which bit is actually sent
-
 signal a_trigger, trigger_strobe: std_logic; --auxiliary signals of edge detector @ trigger input
+
+signal IfCortexId: std_logic; -- an auxiliary flag set if we want to get Cortex ID. For future application.
 begin
 
 --**********************************************************************************************************************************************************
