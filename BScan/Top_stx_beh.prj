@@ -1,3 +1,0 @@
-vhdl isim_temp "InstructionRegister.vhd"
-vhdl isim_temp "boundary_scan_device.vhd"
-vhdl isim_temp "Top.vhd"

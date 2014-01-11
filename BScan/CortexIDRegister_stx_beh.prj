@@ -1,2 +1,0 @@
-vhdl isim_temp "cortex_data.vhd"
-vhdl isim_temp "CortexIDRegister.vhd"
