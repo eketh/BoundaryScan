@@ -55,7 +55,7 @@ signal state, next_state: states;
 
 
 signal DRData: std_logic_vector (32 downto 0); -- data received from JTAG
-constant IRData: std_logic_vector (8 downto 0):= "0011"; --Instruction code to be sent to JTAG
+constant IRData: std_logic_vector (8 downto 0):= "000000011"; --Instruction code to be sent to JTAG
 signal bit_count: integer range 4 downto 0; -- showing which bit is actually sent
 
 
@@ -135,7 +135,7 @@ elsif (clk'event and clk='1') then
 end if;
 end process fsm_reg;
 
-fsm: process (trigger_strobe,clk_prescaler, bit_count)
+fsm: process (trigger_strobe,clk_prescaler, bit_count, state)
 begin
 case state is
   when TReset =>
