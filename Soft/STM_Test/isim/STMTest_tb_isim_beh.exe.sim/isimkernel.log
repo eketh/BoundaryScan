@@ -2,30 +2,34 @@ Command line:
    STMTest_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49998
+     -socket  51878
 
-Sun Dec 29 14:20:11 2013
+Tue Jan 28 22:18:29 2014
 
 
- Elaboration Time: 0.202802 sec
+ Elaboration Time: 0.171601 sec
 
- Current Memory Usage: 1473.02 Meg
+ Current Memory Usage: 1472.33 Meg
 
- Total Signals          : 23
- Total Nets             : 18
+ Total Signals          : 24
+ Total Nets             : 24
  Total Signal Drivers   : 15
  Total Blocks           : 5
  Total Primitive Blocks : 4
  Total Processes        : 7
  Total Traceable Variables  : 18
- Total Scalar Nets and Variables : 417
-Total Line Count : 64
-In process STMTest.vhd:BitShift 
+ Total Scalar Nets and Variables : 428
+Total Line Count : 73
+
+** Failure:Assertion violation
+User(VHDL) Code Called Simulation Stop
+In process STMTest_tb.vhd:stim_proc 
  
 
- Total Simulation Time: 0.374403 sec
 
- Current Memory Usage: 1473.02 Meg
+ Total Simulation Time: 0.202801 sec
 
-Sun Dec 29 14:20:27 2013
+ Current Memory Usage: 843.153 Meg
+
+Tue Jan 28 22:23:23 2014
 

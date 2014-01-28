@@ -58,6 +58,7 @@ BEGIN
    begin		
    reset<='0';
 	tdo_jtag<='1';
+	trigger<='0';
 	wait for 2 ns;
 	reset<='1';
 	wait for 5 ns;

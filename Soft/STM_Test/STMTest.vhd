@@ -54,9 +54,9 @@ type states is (TReset, To_ShiftIR, SHIFTIR, To_ShiftDR, SHIFTDR, To_RunTest, Ru
 signal state, next_state: states;
 
 
-signal DRData: std_logic_vector (32 downto 0); -- data received from JTAG
-constant IRData: std_logic_vector (8 downto 0):= "000000011"; --Instruction code to be sent to JTAG
-signal bit_count: integer range 4 downto 0; -- showing which bit is actually sent
+signal DRData: std_logic_vector (8 downto 0); -- data received from JTAG
+constant IRData: std_logic_vector (8 downto 0):= "110000011"; --Instruction code to be sent to JTAG
+signal bit_count: integer range 8 downto 0; -- showing which bit is actually sent
 
 
 constant SHIFTIRData: std_logic_vector (4 downto 0):= "01100";
@@ -96,13 +96,13 @@ if (reset='0') then
   a_trigger<='0';
   trigger_strobe<='0';
 elsif (clk'event and clk='1') then
-  if (state= TReset or state=RunTest) then
+--  if (state= TReset or state=RunTest) then
     if (a_trigger='0' and trigger='1') then
       trigger_strobe<='1';
     else
       trigger_strobe<='0';
     end if;
-  end if;
+--  end if;
 end if;
 end process trigger_edge;
 
@@ -122,6 +122,9 @@ elsif (clk'event and clk='1') then
     else
       TCK<='1';
     end if;
+	 if (state /= next_state) then
+	   clk_prescaler<=0;
+	 end if;
   end if;
 end if;
 end process TCK_prescaler;
@@ -143,23 +146,23 @@ case state is
 	   next_state<=To_ShiftIR;
 	 end if;
   when To_ShiftIR =>
-    if (clk_prescaler=max_prescaler and bit_count=4) then
+    if (clk_prescaler=max_prescaler and bit_count=4) then --signal: SHIFTIRDATA
 	   next_state<=SHIFTIR;
 	 end if;
   when SHIFTIR =>
-    if (clk_prescaler=max_prescaler and bit_count=3) then
+    if (clk_prescaler=max_prescaler and bit_count=8) then --signal: IRDATA
 	   next_state<=To_ShiftDR;
 	 end if;    
   when To_ShiftDR =>
-    if (clk_prescaler=max_prescaler and bit_count=4) then
+    if (clk_prescaler=max_prescaler and bit_count=4) then --signal: SHIFTDRDATA
 	   next_state<=SHIFTDR;
 	 end if;  
   when SHIFTDR =>
-    if (clk_prescaler=max_prescaler and bit_count=3) then
+    if (clk_prescaler=max_prescaler and bit_count=8) then --signal: DRDATA
 	   next_state<=To_RunTest;
 	 end if;    
   when To_RunTest =>
-    if (clk_prescaler=max_prescaler and bit_count=3) then
+    if (clk_prescaler=max_prescaler and bit_count=2) then --signal: RUNTESTDATA
 	   next_state<=RunTest;
 	 end if;  
   when RunTest =>
@@ -167,7 +170,7 @@ case state is
 	   next_state<=TReset;
 	 end if;    
   when others =>
-    next_state<= TReset; --must go to reset because otherwise an extra state "From_Run_To_ShiftIR" would be required!!!
+    next_state<= TReset; --must go to reset because otherwise an extra state "From_Run_To_ShiftIR" would be required
 end case;
 end process fsm;
 
@@ -186,17 +189,24 @@ elsif (clk'event and clk='1') then
     bit_count<= bit_count+1;
   end if;
     if (state= To_ShiftIR) then
-	   TDI_jtag<=SHIFTIRData(bit_count);
+	   TMS<=SHIFTIRData(bit_count);
+		TDI_JTAG<='0'; --
     elsif (state=SHIFTIR) then
 	   TDI_jtag<=IRData(bit_count);
+	   TMS<='0'; -- i.e.
     elsif (state=To_ShiftDR) then
-	   TDI_jtag<=SHIFTDRData(bit_count);
+	   TMS<=SHIFTDRData(bit_count);
+		TDI_jtag<='0'; -- i.e.
     elsif (state=SHIFTDR) then
 	   DRData(bit_count)<=TDO_jtag;
+	   TDI_jtag<='0';
+	   TMS<='0'; -- i.e.		
     elsif (state=To_RunTest) then
-	   TDI_jtag<=RunTestData(bit_count);
+	   TMS<=RunTestData(bit_count);
+		TDI_jtag<='0';
     else
 	   TDI_jtag<='0';
+		TMS<='1';
     end if;
 end if;
 end process BitShift;
