@@ -1,7 +1,20 @@
 *******************************************************************************************************************
-*******************************************************TODO********************************************************
+*******************************************************CHANGELOG***************************************************
 *******************************************************************************************************************
-11 I 2013
+
+07 II 2014
+
+1) Integrated STMTest with TAP emulator just to correct signal synchronization (seems ok by now, at least for the instruction register). Removed state machine by now because it caused only errors and served no functional purpose since the main STMTest module is nothing more than a serial shift register.
+
+2) Attending JTAG seminar about BST and DFT since 6th Feb for about a week. Too bad JTAG guys always promise to send some booklets but they actually never did :( :( :(
+
+3) Need to erase STM32f4's Flash memory because iirc JTAG pins were used in my previous design. To be done during weekend.
+
+4) ONGOING: request STM's BSDL files or find actual description of debug support in Spartan-3E.
+
+*******************************************************************************************************************
+
+11 I 2014
 
 1) STMTest: add 7Seg handling or at least some LED signalization.
 
@@ -13,6 +26,9 @@
 * Testing methods different than BST (hard to write with no internet connection)
 * Boundary Scan Description Language - last part of the IEEE 1149.1 chapter - basing on BSjhhong0209.pdf OR standards
 
+28 I 2014
+
+1) Quartus is useless and stucks in random moments. :(
 
 *******************************************************************************************************************
 ****************************************************OPEN ISSUES****************************************************
@@ -22,6 +38,6 @@ LEGEND
 @ - issue
 # - solution
 
-11 I 2013
+11 I 2014
 
 @STM_Test entity: what should be the length of the signal vector containing DATA_REGISTER output? Probably there should be a few of these *associated this point with TODO section because it requires some more writing*
