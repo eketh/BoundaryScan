@@ -1,0 +1,2 @@
+vhdl work "STMTest.vhd"
+vhdl work "STMTest_tb.vhd"
