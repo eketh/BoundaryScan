@@ -3,6 +3,7 @@ DIRECTORIES STRUCTURE
 
 Doc:
 1. MThesis - master thesis
+2. Test Plan - journal with project milestones (just to have some database regarding what was done before 10th semester)
 
 Soft:
 1. BScan - old version of Boundary Scan project held as a reference

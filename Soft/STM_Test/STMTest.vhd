@@ -4,26 +4,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
 --**********************************************************************************************************************************************************
--- What was done 11 I 2014:
--- ??????????????
--- "Only the DEV_ID(11:0) should be used for identification by the debugger/programmer tools."
+-- TODO
+-- *dostosowac do jtaga w STM32F4.
+-- *dodac wyswietlanie DRData np. na LCDku Spartana 3E, zebysmy wiedzieli, czy w ogóle cos otrzymujemy od ukladu.
+-- *w dalekiej przyszlosci: dodac opcje zapisywania pamieci Flash. :)
 
--- INSTRUCTION REGISTER (IRData) LENGTH + VALUE
--- both SHIFTIR and SHIFTDR data are now 9-bits wide. Higher 5 bits refer to Boundary Scan TAP and
--- lower 4 bits refer to Cortex-M4 TAP.
--- Also, we need a value of "11101111" in IRDATA to get JTAG's DevId + "111111110" to get Cortex's DevId.
--- Not pretty sure about JTAG instruction - it is based on some old BSDL files.
-
--- Cortex's DevId *should* be equal to 0x4BA00477. *Some* BYP value should be located @ last place.
--- JTAG's DevId *should* be equal to 0x06413041. *Some* BYP value should be located @ first place.
--- 
--- DATA REGISTER (DRData) LENGTH
--- Right now I assume that everything I need from ST Discovery is to read its DEVID, be it JTAG ID or Cortex-M4 ID. In such case,
--- DevID is 32-bits long. Adding one bit for one BYPASS value from the second component, there are 33 bits.
-
+-- OPEN ISSUES
+-- *jak update'owac instrukcje tylko w boundary scanie albo tylko w Corteksie?
 --**********************************************************************************************************************************************************
-
-
 --**********************************************************************************************************************************************************
 -- PORTS
 -- clk, reset - generic clock and generic reset (or rather nreset because it is active low).
@@ -39,7 +27,8 @@ entity STMTest is
 port(
   clk: in std_logic;
   reset: in std_logic;
-  trigger: in std_logic; 
+  trigger: in std_logic;
+  button: in std_logic;  
   TDO_jtag: in std_logic; 
   TDI_jtag: out std_logic; 
   TMS: out std_logic; 
@@ -50,166 +39,137 @@ end STMTest;
 
 architecture STMTest_a of STMTest is
 
-type states is (TReset, To_ShiftIR, SHIFTIR, To_ShiftDR, SHIFTDR, To_RunTest, RunTest);
+type states is (sReset, sRun, sDataReg);
 signal state, next_state: states;
 
+--sDataReg: nic nie powinno stamtad uciekac. neva eva.
 
-signal DRData: std_logic_vector (8 downto 0); -- data received from JTAG
-constant IRData: std_logic_vector (8 downto 0):= "110000011"; --Instruction code to be sent to JTAG
-signal bit_count: integer range 8 downto 0; -- showing which bit is actually sent
+--reverse to make TAP state machine trackable.
+constant ToShiftIR: std_logic_vector (0 to 4):= "01100";
+constant ToShiftDR: std_logic_vector (0 to 5):= "110100";
+constant ToRun: std_logic_vector (0 to 2):="110";
 
+constant ILength: integer :=8;
+constant RunLength: integer:=24;
 
-constant SHIFTIRData: std_logic_vector (4 downto 0):= "01100";
-constant SHIFTDRData: std_logic_vector (4 downto 0):= "11100";
-constant RunTestData: std_logic_vector (2 downto 0):="110";
+constant IRData: std_logic_vector (Ilength downto 0):= "111111111"; --Instruction code to be sent to JTAG
+constant AllZeros: std_logic_vector(0 to 17):="000000000000000000"; -- czy da sie to robic nie w tak lopatologiczny sposob? :(
+
+constant data_TMS: std_logic_vector (0 to RunLength):= ToShiftIR & AllZeros(0 to (Ilength-1)) & ToShiftDR & ToRun & "000";-- showing which bit is actually sent
+constant data_TDI: std_logic_vector (0 to RunLength):= AllZeros(0 to 4) & IRData & AllZeros(0 to 10);
+
 
 --prescaler values for TCK.
 -- For testing purposes, reduce them to i.e. 3-bit values not to wait for result for ages.
-constant max_prescaler: integer := 7;--49;
-constant half_prescaler: integer := 3;--24;
-constant shift_prescaler: integer := 3;--12; -- some value "considered safe" where shift register is shifted.
+constant max_prescaler: integer := 8;--49;
+constant half_prescaler: integer := 4;--24;
+constant shift_prescaler: integer := 2;--12; -- some value "considered safe" where shift register is shifted
+
 signal clk_prescaler: integer range max_prescaler downto 0;
 
-signal a_trigger, trigger_strobe: std_logic; --auxiliary signals of edge detector @ trigger input
+signal bit_count: integer range RunLength downto 0; -- showing which bit is actually sent
 
-signal IfCortexId: std_logic; -- an auxiliary flag set if we want to get Cortex ID. For future application.
+signal a_trigger, trigger_strobe: std_logic; --auxiliary signals of edge detector @ trigger input
+signal sample: std_logic;
+signal sTCK: std_logic;
 begin
 
 --**********************************************************************************************************************************************************
---PROCESSES
---trigger_edge: edge detector @ trigger input. Active only in these states where it is required not to make some mess in the others and to save energy as well.
---tck_prescaler: sets clock for JTAG. According to BSDL files for STM32 family, its value should be somewhat smaller than 10 MHz. Inactive in TRESET state.
---fsm_reg: process synchronizing state machine with CLK signal
---fsm: finite state machine with the following states:
--- Reset: default state after reset
--- To_ShiftIR/To_ShiftDR, To_RunTest: known sequences sent on TMS used to reach the desired state in device TAP. Just a known sequence of TMS in each case.
--- SHIFTIR, SHIFTDR: processes sending data from 2 shift registers (DRData, IRData) into IR and DR. In the first case, instruction register is being shifted
--- out to the device. In the second case, data register is shifted in from the device.
---BitShift: main process shifting bits out and into the device in all the states where some bits are being shifted (To_Shiftir/dr, SHIFTIR/DR, ToRunTest).
--- It chooses register out of which/into which data are shifted.
--- I think that it works right now :P
---**********************************************************************************************************************************************************
-
 trigger_edge: process (clk,reset)
 begin
 if (reset='0') then
   a_trigger<='0';
   trigger_strobe<='0';
 elsif (clk'event and clk='1') then
---  if (state= TReset or state=RunTest) then
-    if (a_trigger='0' and trigger='1') then
-      trigger_strobe<='1';
-    else
-      trigger_strobe<='0';
-    end if;
---  end if;
+  if (a_trigger='0' and trigger='1') then
+    trigger_strobe<='1';
+  else
+    trigger_strobe<='0';
+  end if;
 end if;
 end process trigger_edge;
 
 TCK_prescaler: process (clk, reset)
 begin
 if (reset='0') then
-  TCK<='0';
   clk_prescaler<=0;
 elsif (clk'event and clk='1') then
-  if (state /= TReset) then
     clk_prescaler<=clk_prescaler+1;
-	 if (clk_prescaler=max_prescaler) then
-	   clk_prescaler<=0;
+  if (clk_prescaler=max_prescaler) then
+    clk_prescaler<=0;
 	 end if;
-    if (clk_prescaler<half_prescaler) then
-      TCK<='0';
-    else
-      TCK<='1';
-    end if;
-	 if (state /= next_state) then
-	   clk_prescaler<=0;
-	 end if;
-  end if;
 end if;
 end process TCK_prescaler;
 
-fsm_reg: process (clk, reset)
+bitcounting:process (clk,reset)
 begin
 if (reset='0') then
-  state<=TReset;
+  bit_count<=0;
+elsif (clk'event and clk='1') then
+  if (state=sRun) then
+    if (clk_prescaler = half_prescaler ) then
+      bit_count<= bit_count+1;
+    end if;
+  else
+	   bit_count<=0;
+  end if;
+end if;
+end process bitcounting;
+
+fsm_reg: process (reset,clk)
+begin
+if (reset='0') then
+  state<=sReset;
 elsif (clk'event and clk='1') then
   state<=next_state;
 end if;
 end process fsm_reg;
 
-fsm: process (trigger_strobe,clk_prescaler, bit_count, state)
+fsm:process (trigger_strobe, clk_prescaler, bit_count)
 begin
-case state is
-  when TReset =>
-    if (trigger_strobe='1') then
-	   next_state<=To_ShiftIR;
-	 end if;
-  when To_ShiftIR =>
-    if (clk_prescaler=max_prescaler and bit_count=4) then --signal: SHIFTIRDATA
-	   next_state<=SHIFTIR;
-	 end if;
-  when SHIFTIR =>
-    if (clk_prescaler=max_prescaler and bit_count=8) then --signal: IRDATA
-	   next_state<=To_ShiftDR;
-	 end if;    
-  when To_ShiftDR =>
-    if (clk_prescaler=max_prescaler and bit_count=4) then --signal: SHIFTDRDATA
-	   next_state<=SHIFTDR;
-	 end if;  
-  when SHIFTDR =>
-    if (clk_prescaler=max_prescaler and bit_count=8) then --signal: DRDATA
-	   next_state<=To_RunTest;
-	 end if;    
-  when To_RunTest =>
-    if (clk_prescaler=max_prescaler and bit_count=2) then --signal: RUNTESTDATA
-	   next_state<=RunTest;
-	 end if;  
-  when RunTest =>
-    if (trigger_strobe='1') then
-	   next_state<=TReset;
-	 end if;    
-  when others =>
-    next_state<= TReset; --must go to reset because otherwise an extra state "From_Run_To_ShiftIR" would be required
-end case;
-end process fsm;
 
-BitShift: process (clk, reset)
+case state is
+  when sReset =>
+  if (trigger_strobe='1') then
+    next_state<=sRun;
+  end if;
+  
+  when sRun =>
+  if (clk_prescaler=max_prescaler and bit_count=19) then
+    next_state<=sDataReg;
+  end if;  
+  
+  when sDataReg=>
+  when others =>
+    next_state<=sReset;
+  end case;	 
+
+end process fsm; 
+
+datareg: process (clk, reset)
 begin
 if (reset='0') then
-  TMS<='1'; --we assume that we are in TestLogicReset state right now. When we send 1, TAP remains in this state.
-  TRST<='0';
-  TDI_jtag<='0'; --no idea whether 0 or 1 changes something in that case.
-  bit_count<=0;
-  DRData<=(others=>'0');
+  TDI_jtag<='0';
 elsif (clk'event and clk='1') then
-  if (next_state /= state) then
-    bit_count<=0;
-  elsif (clk_prescaler = shift_prescaler) then
-    bit_count<= bit_count+1;
+  if (state=sRun) then
+    TDI_jtag<= data_TDI(bit_count);
+    TMS<= data_TMS(bit_count);	 
+  elsif (state=sDataReg) then
+    TDI_jtag<=button;
+    TMS<='0';
+  else
+    TDI_jtag<='0';
+	 TMS<='1';
   end if;
-    if (state= To_ShiftIR) then
-	   TMS<=SHIFTIRData(bit_count);
-		TDI_JTAG<='0'; --
-    elsif (state=SHIFTIR) then
-	   TDI_jtag<=IRData(bit_count);
-	   TMS<='0'; -- i.e.
-    elsif (state=To_ShiftDR) then
-	   TMS<=SHIFTDRData(bit_count);
-		TDI_jtag<='0'; -- i.e.
-    elsif (state=SHIFTDR) then
-	   DRData(bit_count)<=TDO_jtag;
-	   TDI_jtag<='0';
-	   TMS<='0'; -- i.e.		
-    elsif (state=To_RunTest) then
-	   TMS<=RunTestData(bit_count);
-		TDI_jtag<='0';
-    else
-	   TDI_jtag<='0';
-		TMS<='1';
-    end if;
 end if;
-end process BitShift;
+end process datareg;
+
+sTCK<= '0' when (clk_prescaler<half_prescaler) else '1';
+TCK<=sTCK;
+TRST<=reset;
+
+--TMS<= data_TMS(bit_count);
+--TDI_jtag<= data_TDI(bit_count);
 
 end STMTest_a;
 

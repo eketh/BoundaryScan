@@ -2,24 +2,24 @@ Command line:
    STMTest_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  51878
+     -socket  63620
 
-Tue Jan 28 22:18:29 2014
+Sat Feb 08 19:08:11 2014
 
 
- Elaboration Time: 0.171601 sec
+ Elaboration Time: 0.0624 sec
 
- Current Memory Usage: 1472.33 Meg
+ Current Memory Usage: 1476.16 Meg
 
- Total Signals          : 24
- Total Nets             : 24
+ Total Signals          : 26
+ Total Nets             : 17
  Total Signal Drivers   : 15
  Total Blocks           : 5
  Total Primitive Blocks : 4
- Total Processes        : 7
- Total Traceable Variables  : 18
- Total Scalar Nets and Variables : 428
-Total Line Count : 73
+ Total Processes        : 11
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 492
+Total Line Count : 51
 
 ** Failure:Assertion violation
 User(VHDL) Code Called Simulation Stop
@@ -27,9 +27,9 @@ In process STMTest_tb.vhd:stim_proc
  
 
 
- Total Simulation Time: 0.202801 sec
+ Total Simulation Time: 0.1092 sec
 
- Current Memory Usage: 843.153 Meg
+ Current Memory Usage: 1476.16 Meg
 
-Tue Jan 28 22:23:23 2014
+Sat Feb 08 19:08:18 2014
 

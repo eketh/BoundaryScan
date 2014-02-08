@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/sw_repo/Soft/STM_Test/STMTest_tb_isim_beh.exe" -prj "C:/sw_repo/Soft/STM_Test/STMTest_tb_beh.prj" "work.STMTest_tb" 
+-intstyle "ise" -incremental -o "C:/sw_repo/Soft/STM_Test/STMTest_tb_isim_beh.exe" -prj "C:/sw_repo/Soft/STM_Test/STMTest_tb_beh.prj" "work.STMTest_tb" 

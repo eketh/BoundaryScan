@@ -14,6 +14,7 @@ ARCHITECTURE behavior OF STMTest_tb IS
          trigger : IN  std_logic;
          TDO_jtag : IN  std_logic;
          TDI_jtag : OUT  std_logic;
+			button: in std_logic; 
          TMS : OUT  std_logic;
          TRST : OUT  std_logic;
          TCK : OUT  std_logic
@@ -22,6 +23,7 @@ ARCHITECTURE behavior OF STMTest_tb IS
     
 
    signal clk : std_logic;
+	signal button : std_logic;
    signal reset : std_logic;
    signal trigger : std_logic;
    signal TDO_jtag : std_logic;
@@ -35,6 +37,7 @@ ARCHITECTURE behavior OF STMTest_tb IS
 BEGIN
    jacenty: STMTest PORT MAP (
           clk => clk,
+			 button => button,
           reset => reset,
           trigger => trigger,
           TDO_jtag => TDO_jtag,
@@ -63,7 +66,7 @@ BEGIN
 	reset<='1';
 	wait for 5 ns;
 	trigger<='1';
-	wait for 150 ns;
+	wait for 500 ns;
 	assert false severity failure;
    end process;
 
