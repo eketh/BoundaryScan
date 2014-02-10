@@ -82,13 +82,13 @@
          <ClosedNode>/Top - Top_a C:|Users|Elsik|Desktop|DYPLOM|Boundary_scan|Top.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>uut - TAP - TAP_a (C:/sw_repo/Soft/BScan/boundary_scan_device.vhd)</SelectedItem>
+         <SelectedItem>Top_test - Top_test_a (C:/sw_repo/Soft/BScan/Top_test.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b20000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>uut - TAP - TAP_a (C:/sw_repo/Soft/BScan/boundary_scan_device.vhd)</CurrentItem>
+      <CurrentItem>Top_test - Top_test_a (C:/sw_repo/Soft/BScan/Top_test.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-12-29T13:20:28</DateModified>
+  <DateModified>2014-02-10T22:25:01</DateModified>
   <ModuleName>STMTest</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/!DYPLOM-stare/STM_Test/iseconfig/STMTest.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/!DYPLOM-stare/STM_Test</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2014-02-10T22:11:32</SummaryTimeStamp>
+  <SavedFilePath>C:/sw_repo/Soft/WIP/iseconfig/STMTest.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/sw_repo/Soft/WIP\</ImplementationReportsDirectory>
   <DateInitialized>2013-12-29T13:12:18</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

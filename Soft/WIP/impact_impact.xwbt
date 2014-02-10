@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\sw_repo\Soft\WIP\impact.xsl
+OUTFILE=C:\sw_repo\Soft\WIP\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\sw_repo\Soft\WIP
+LICENSE=iMPACT
+USER_INFO=iMPACT

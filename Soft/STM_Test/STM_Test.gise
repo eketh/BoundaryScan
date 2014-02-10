@@ -84,6 +84,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1391882514" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1391882514">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1391882851" xil_pn:in_ck="2505964540475155645" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1391882851">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -112,6 +113,7 @@
     <transform xil_pn:end_ts="1391882863" xil_pn:in_ck="2505964540475155645" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6701319554372252298" xil_pn:start_ts="1391882858">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="STMTest_tb_beh.prj"/>
@@ -124,6 +126,8 @@
     <transform xil_pn:end_ts="1391882876" xil_pn:in_ck="-7025064824270817093" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8286986868398229997" xil_pn:start_ts="1391882876">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="STMTest_tb_isim_beh.wdb"/>
