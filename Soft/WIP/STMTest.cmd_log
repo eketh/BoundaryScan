@@ -133,3 +133,27 @@ map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STMTest
 par -w -intstyle ise -ol high -t 1 STMTest_map.ncd STMTest.ncd STMTest.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STMTest.twx STMTest.ncd -o STMTest.twr STMTest.pcf -ucf spartan.ucf 
 bitgen -intstyle ise -f STMTest.ut STMTest.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STMTest.xst" -ofn "C:/sw_repo/Soft/WIP/STMTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STMTest.ngc STMTest.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STMTest_map.ncd STMTest.ngd STMTest.pcf 
+par -w -intstyle ise -ol high -t 1 STMTest_map.ncd STMTest.ncd STMTest.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STMTest.twx STMTest.ncd -o STMTest.twr STMTest.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STMTest.ut STMTest.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STMTest.xst" -ofn "C:/sw_repo/Soft/WIP/STMTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STMTest.ngc STMTest.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STMTest_map.ncd STMTest.ngd STMTest.pcf 
+par -w -intstyle ise -ol high -t 1 STMTest_map.ncd STMTest.ncd STMTest.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STMTest.twx STMTest.ncd -o STMTest.twr STMTest.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STMTest.ut STMTest.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STMTest.xst" -ofn "C:/sw_repo/Soft/WIP/STMTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STMTest.ngc STMTest.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STMTest_map.ncd STMTest.ngd STMTest.pcf 
+par -w -intstyle ise -ol high -t 1 STMTest_map.ncd STMTest.ncd STMTest.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STMTest.twx STMTest.ncd -o STMTest.twr STMTest.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STMTest.ut STMTest.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STMTest.xst" -ofn "C:/sw_repo/Soft/WIP/STMTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STMTest.ngc STMTest.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STMTest_map.ncd STMTest.ngd STMTest.pcf 
+par -w -intstyle ise -ol high -t 1 STMTest_map.ncd STMTest.ncd STMTest.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STMTest.twx STMTest.ncd -o STMTest.twr STMTest.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STMTest.ut STMTest.ncd 
