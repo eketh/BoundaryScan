@@ -1,6 +1,17 @@
 *******************************************************************************************************************
 *******************************************************CHANGELOG***************************************************
 *******************************************************************************************************************
+24 II 2014
+
+1) JTAG booklets are useless and so is requesting JTAGs to send anything to you (waiting for ProVision IDE since like a week).
+
+2) IDCODEs work pretty well.
+
+3) Tried to make some SPARTAN-3E programming with a very simple program, but it seems pointless (small 1-gate application generates a ~200 kB-large .bit file. Doesn't seem nice to implement). Read/write of some config data seems more reasonable.
+
+4) ONGOING STM32 programming: need to spend some more time with this stuff (and I will) - mainly the AHB bus.
+
+*******************************************************************************************************************
 
 07 II 2014
 
@@ -11,6 +22,12 @@
 3) Need to erase STM32f4's Flash memory because iirc JTAG pins were used in my previous design. To be done during weekend.
 
 4) ONGOING: request STM's BSDL files or find actual description of debug support in Spartan-3E.
+
+*******************************************************************************************************************
+
+28 I 2014
+
+1) Quartus is useless and stucks in random moments. :(
 
 *******************************************************************************************************************
 
@@ -25,19 +42,3 @@
 
 * Testing methods different than BST (hard to write with no internet connection)
 * Boundary Scan Description Language - last part of the IEEE 1149.1 chapter - basing on BSjhhong0209.pdf OR standards
-
-28 I 2014
-
-1) Quartus is useless and stucks in random moments. :(
-
-*******************************************************************************************************************
-****************************************************OPEN ISSUES****************************************************
-*******************************************************************************************************************
-
-LEGEND
-@ - issue
-# - solution
-
-11 I 2014
-
-@STM_Test entity: what should be the length of the signal vector containing DATA_REGISTER output? Probably there should be a few of these *associated this point with TODO section because it requires some more writing*
