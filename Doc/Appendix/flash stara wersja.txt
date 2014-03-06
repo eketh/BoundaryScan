@@ -1,0 +1,226 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_unsigned.all;
+
+--**********************************************************************************************************************************************************
+-- TODO
+-- *dostosowac do jtaga w STM32F4.
+-- *dodac wyswietlanie DRData np. na LCDku Spartana 3E, zebysmy wiedzieli, czy w ogóle cos otrzymujemy od ukladu.
+-- *w dalekiej przyszlosci: dodac opcje zapisywania pamieci Flash. 
+
+-- OPEN ISSUES
+-- *jak update'owac instrukcje tylko w boundary scanie albo tylko w Corteksie?
+--**********************************************************************************************************************************************************
+--**********************************************************************************************************************************************************
+-- PORTS
+-- clk, reset - generic clock and generic reset (or rather nreset because it is active low).
+-- trigger - input that triggers testing process. Probably it will be some button.
+-- TDO_jtag: data received from TDO pin of JTAG.
+-- TDI_jtag: data sent to TDI pin of JTAG.
+-- TMS - TMS signal sent to JTAG during states transition.
+-- TRST - active low reset signal sent to JTAG.
+-- TCK - clock signal sent to JTAG.
+--**********************************************************************************************************************************************************
+
+entity STM_Quartus is
+port(
+  clk: in std_logic;
+  reset: in std_logic;
+  trigger: in std_logic;
+  button: in std_logic;
+  TDO_jtag: in std_logic;
+  TDI_jtag: out std_logic;
+  TMS: out std_logic;
+  TRST: out std_logic;
+  TCK: out std_logic;
+  TDO_led: out std_logic;
+  reset_led: out std_logic;
+  state_led1: out std_logic;
+  state_led2: out std_logic;
+  state_led3: out std_logic
+);
+end STM_Quartus;
+
+architecture STM_a of STM_Quartus is
+
+type states is (sReset, sRun, sDataReg);
+signal state, next_state: states;
+
+--sDataReg: nic nie powinno stamtad uciekac. neva eva. 
+
+--reverse to make TAP state machine trackable.
+constant ToShiftIR: std_logic_vector (0 to 9):= "0000001100";
+constant ToShiftDR: std_logic_vector (0 to 4):= "11100";
+constant DRReturnData: std_logic_vector(0 to 4):="11100";
+constant FromDRToIR: std_logic_vector(0 to 5):="111100";
+
+
+constant ILength: integer :=8;
+constant RunLength: integer:=23;
+
+constant IRData1: std_logic_vector (0 to ILength):= "010111111"; --DPACC
+constant IRData2: std_logic_vector (0 to ILength):= "011111111"; -- APACC
+
+constant AllZeros: std_logic_vector(0 to 35):="000000000000000000000000000000000000"; -- czy da sie to robic nie w tak lopatologiczny sposob? 
+
+constant DPCode1: std_logic_vector(0 to 35):="001000000000000000000000000000001111";--000001111111111111110000000001111"; -- [0]=1-read,[2:1]=01- CTRL-STAT, reszta - xxxx????
+constant DPCode2: std_logic_vector(0 to 35):="101000000000000000000000000000001111";
+--constant APCode1: std_logic_vector(0 to 35):="000010001000000000000000000110001010"; --32b data size
+--constant APCode2: std_logic_vector(0 to 35):="010000001111111111111110000000001110"; --address
+--constant APCode3: std_logic_vector(0 to 35):="111000000000000000000000000000000000"; --dummy read
+--constant APCode4: std_logic_vector(0 to 35):="111000000000000000000000000000000000"; -- access
+
+
+constant data_TMS: std_logic_vector(0 to RunLength):= ToShiftIR(0 to 9) & AllZeros(0 to Ilength) & ToShiftDR(0 to 4);-- & AllZeros(0 to 35) & DRReturnData(0 to 4) & AllZeros(0 to 35) & DRReturnData & "000";
+constant data_TDI: std_logic_vector(0 to RunLength):= AllZeros(0 to 9) & IRData2(0 to ILength) & AllZeros (0 to 4);-- & DPCode1(0 to 35)  & AllZeros(0 to 4) & DPCode2(0 to 35) & AllZeros (0 to 4) & "000";
+--constant data_TMS: std_logic_vector (0 to (RunLength)):= ToShiftIR & AllZeros(0 to Ilength) & ToShiftDR & AllZeros(0 to 35) & FromDRToIR & AllZeros(0 to ILength) & ToShiftDr & AllZeros(0 to 35) & DRReturnData & AllZeros(0 to 35) & DRReturnData & AllZeros(0 to 35) & DRReturnData & AllZeros(0 to 35) & DRReturnData & '0';
+
+--constant data_TDI: std_logic_vector (0 to (RunLength)):= AllZeros(0 to 9) & IRData1(0 to ILength) & AllZeros (0 to 4) & DPCode1(0 to 35)  & AllZeros(0 to 5) & IRData2(0 to ILength) & AllZeros(0 to 4) & APCode1(0 to 35) & AllZeros(0 to 4) & APCode2(0 to 35) & AllZeros(0 to 4) & APCode3(0 to 35) & AllZeros(0 to 4) & APCode4(0 to 35) & AllZeros(0 to 4) & '0';
+
+--sygnaly pomocnicze 
+--constant ifDR: std_logic_vector (0 to RunLength):= '0'; --AllZeros(0 to 10) & AllZeros(0 to ILength) & AllZeros (0 to 3) & NOT AllZeros(0 to 35)  & AllZeros(0 to 5) & AllZeros(0 to ILength) & AllZeros(0 to 4) & NOT AllZeros(0 to 35) & AllZeros(0 to 4) & NOT AllZeros(0 to 35) & AllZeros(0 to 4) & NOT AllZeros(0 to 35) & AllZeros(0 to 4) & NOT AllZeros(0 to 35) & AllZeros(0 to 4);
+--constant ifIR: std_logic_vector(0 to RunLength):='0'; --AllZeros(0 to 10) & NOT AllZeros(0 to ILength) & AllZeros (0 to 3) & AllZeros(0 to 35)  & AllZeros(0 to 5) & NOT AllZeros(0 to ILength) & AllZeros(0 to 4) & AllZeros(0 to 35) & AllZeros(0 to 4) & AllZeros(0 to 35) & AllZeros(0 to 4) & AllZeros(0 to 35) & AllZeros(0 to 4) & AllZeros(0 to 35) & AllZeros(0 to 4);
+
+signal sifDR: std_logic;
+signal sifIR: std_logic;
+
+--prescaler values for TCK.
+-- For testing purposes, reduce them to i.e. 3-bit values not to wait for result for ages.
+constant max_prescaler: integer := 49;
+constant half_prescaler: integer := 24;
+constant shift_prescaler: integer := 36; -- some value "considered safe" where shift register is shifted
+
+signal clk_prescaler: integer range max_prescaler downto 0;
+
+signal bit_count: integer range RunLength downto 0; -- showing which bit is actually sent
+
+signal a_trigger, trigger_strobe: std_logic; --auxiliary signals of edge detector @ trigger input
+signal sample: std_logic;
+signal sTCK: std_logic;
+begin
+
+--**********************************************************************************************************************************************************
+trigger_edge: process (clk,reset)
+begin
+if (reset='0') then
+  a_trigger<='0';
+  trigger_strobe<='0';
+elsif (clk'event and clk='1') then
+  if (a_trigger='0' and trigger='1') then
+    trigger_strobe<='1';
+  else
+    trigger_strobe<='0';
+  end if;
+end if;
+end process trigger_edge;
+
+TCK_prescaler: process (clk, reset)
+begin
+if (reset='0') then
+  clk_prescaler<=0;
+elsif (clk'event and clk='1') then
+    clk_prescaler<=clk_prescaler+1;
+  if (clk_prescaler=max_prescaler) then
+    clk_prescaler<=0;
+  end if;
+end if;
+end process TCK_prescaler;
+
+bitcounting:process (clk,reset)
+begin
+if (reset='0') then
+  bit_count<=0;
+elsif (clk'event and clk='1') then
+  if (state=sRun) then
+    if (clk_prescaler = shift_prescaler ) then
+	   if (bit_count<RunLength) then
+        bit_count<= bit_count+1;
+		end if;
+    end if;
+  else
+bit_count<=0;
+  end if;
+end if;
+end process bitcounting;
+
+fsm_reg: process (reset,clk)
+begin
+if (reset='0') then
+  state<=sReset;
+
+elsif (clk'event and clk='1') then
+  state<=next_state;
+end if;
+end process fsm_reg;
+
+fsm:process (state, trigger_strobe, clk_prescaler, bit_count)
+begin
+
+case state is
+  when sReset =>
+  if (trigger_strobe='1') then
+    next_state<=sRun;
+  else
+    next_state<=sReset;
+  end if;
+  
+  when sRun =>
+  if (clk_prescaler=(max_prescaler-1) and bit_count=RunLength) then
+    next_state<=sDataReg;
+  else
+    next_state<=sRun;
+  end if;
+  
+  when sDataReg =>
+--    if (trigger_strobe='1') then
+      next_state<=sDataReg;
+--    else
+--      next_state<=sDataReg;
+--   end if;
+
+  when others =>
+    next_state<=sReset;
+  end case;	
+
+end process fsm;
+
+datareg: process (clk, reset)
+begin
+if (reset='0') then
+  TDI_jtag<='0';
+  TMS<='1';
+--  sifIR<='0';
+--  sifDR<='0';
+elsif (clk'event and clk='1') then
+  if (state=sRun) then
+    TDI_jtag<= data_TDI(bit_count);
+    TMS<= data_TMS(bit_count);	
+	 --pomocnicze
+--	 sifIR<=ifIR(bit_count);
+--	 sifDR<=ifDR(bit_count);
+  elsif (state=sDataReg) then
+    TDI_jtag<=button;
+    TMS<='0';
+--	 sifIR<='0';
+--	 sifDR<='1';
+  else
+    TDI_jtag<='0';
+    TMS<='1';
+  end if;
+end if;
+end process datareg;
+
+sTCK<= '0' when (state /= sReset and clk_prescaler<half_prescaler) else '1';
+TCK<=sTCK;
+TRST<=reset;
+TDO_led<=TDO_jtag;
+reset_led<=reset;
+state_led1<= '1' when (state=sDataReg) else '0';
+state_led2<= '1' when (state=sRun) else '0';
+state_led3<='1' when (state=sDataReg) else '0';
+
+
+--TMS<= data_TMS(bit_count);
+--TDI_jtag<= data_TDI(bit_count);
+
+end STM_a;
