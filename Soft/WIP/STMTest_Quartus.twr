@@ -45,7 +45,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-button      |    1.316(R)|    0.062(R)|clk_BUFGP         |   0.000|
+button      |    2.383(R)|   -0.786(R)|clk_BUFGP         |   0.000|
 trigger     |    0.816(R)|    0.467(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
@@ -54,12 +54,12 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-TCK         |   12.589(R)|clk_BUFGP         |   0.000|
-TDI_jtag    |   10.159(R)|clk_BUFGP         |   0.000|
-TMS         |   10.324(R)|clk_BUFGP         |   0.000|
-state_led1  |    7.902(R)|clk_BUFGP         |   0.000|
-state_led2  |    9.189(R)|clk_BUFGP         |   0.000|
-state_led3  |    7.983(R)|clk_BUFGP         |   0.000|
+TCK         |   12.461(R)|clk_BUFGP         |   0.000|
+TDI_jtag    |   10.399(R)|clk_BUFGP         |   0.000|
+TMS         |   10.228(R)|clk_BUFGP         |   0.000|
+state_led1  |    7.923(R)|clk_BUFGP         |   0.000|
+state_led2  |    9.557(R)|clk_BUFGP         |   0.000|
+state_led3  |    7.991(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -67,7 +67,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.993|         |         |         |
+clk            |    4.080|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
@@ -75,12 +75,12 @@ Pad to Pad
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
 TDO_jtag       |TDO_led        |    5.647|
-reset          |TRST           |    9.287|
-reset          |reset_led      |    8.519|
+reset          |TRST           |    9.285|
+reset          |reset_led      |    8.517|
 ---------------+---------------+---------+
 
 
-Analysis completed Wed Feb 12 22:01:00 2014 
+Analysis completed Wed Feb 12 22:42:32 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

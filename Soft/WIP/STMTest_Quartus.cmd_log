@@ -10,3 +10,9 @@ map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STMTest
 par -w -intstyle ise -ol high -t 1 STMTest_Quartus_map.ncd STMTest_Quartus.ncd STMTest_Quartus.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STMTest_Quartus.twx STMTest_Quartus.ncd -o STMTest_Quartus.twr STMTest_Quartus.pcf -ucf spartan.ucf 
 bitgen -intstyle ise -f STMTest_Quartus.ut STMTest_Quartus.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STMTest_Quartus.xst" -ofn "C:/sw_repo/Soft/WIP/STMTest_Quartus.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STMTest_Quartus.ngc STMTest_Quartus.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STMTest_Quartus_map.ncd STMTest_Quartus.ngd STMTest_Quartus.pcf 
+par -w -intstyle ise -ol high -t 1 STMTest_Quartus_map.ncd STMTest_Quartus.ncd STMTest_Quartus.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STMTest_Quartus.twx STMTest_Quartus.ncd -o STMTest_Quartus.twr STMTest_Quartus.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STMTest_Quartus.ut STMTest_Quartus.ncd 

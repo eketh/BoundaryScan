@@ -1,0 +1,5 @@
+V3 3
+FL C:/sw_repo/Soft/BITgen/bit.vhd 2014/02/26.21:10:19 P.68d
+EN work/bit 1393752924 FL C:/sw_repo/Soft/BITgen/bit.vhd PB ieee/std_logic_1164 1370735607
+AR work/bit/Behavioral 1393752925 \
+      FL C:/sw_repo/Soft/BITgen/bit.vhd EN work/bit 1393752924

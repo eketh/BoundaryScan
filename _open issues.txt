@@ -1,5 +1,13 @@
 *******************************************************************************************************************
 *******************************************************CHANGELOG***************************************************
+15 III 2014
+
+1) Added separate chapter about 1532 (in Doc/Appendix).
+
+2) STM32 JTAG works pretty well, but there are issues with reading memory values- first two bytes of read are 0xff. Different instructions are OK.
+
+3) Seems that Spartan-3E is 1532-compliant. Should try it out.
+
 *******************************************************************************************************************
 24 II 2014
 

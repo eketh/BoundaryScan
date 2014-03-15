@@ -1,0 +1,53 @@
+NDS Database:  version P.68d
+
+NDS_INFO | xc9500 | 95144100PQ | XC95144-7-PQ100
+
+DEVICE | 95144 | 95144100PQ | 
+
+NETWORK | bit | 0 | 0 | 201408519
+
+MACROCELL_INSTANCE | FbkInv+Merge+OptxMapped | a_OBUF | bit_COPY_0_COPY_0 | 2155907072 | 0 | 2
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | a_OBUF | 15 | ? | 0 | 0 | bit_COPY_0_COPY_0 | NULL | a_OBUF.Q | a_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | a_OBUF.UIM | 21 | ? | 0 | 0 | bit_COPY_0_COPY_0 | NULL | a_OBUF.Q | a_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | a_OBUF.SI | a_OBUF | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | a_OBUF.D1 | 18 | ? | 0 | 4096 | a_OBUF | NULL | NULL | a_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | a_OBUF.D2 | 19 | ? | 0 | 4096 | a_OBUF | NULL | NULL | a_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_DC
+
+SRFF_INSTANCE | a_OBUF.REG | a_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | a_OBUF.D | 17 | ? | 0 | 0 | a_OBUF | NULL | NULL | a_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | a_OBUF.Q | 20 | ? | 0 | 0 | a_OBUF | NULL | NULL | a_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | a | bit_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | a_OBUF | 15 | ? | 0 | 0 | bit_COPY_0_COPY_0 | NULL | a_OBUF.Q | a_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | a | 16 | PO | 0 | 0 | bit_COPY_0_COPY_0 | NULL | NULL | a | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | a_OBUF | 1 | NULL | 0 | a | 1 | 13 | 49152
+
+FB_INSTANCE | FOOBAR2_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR3_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR5_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR6_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR7_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR8_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR9_ | bit_COPY_0_COPY_0 | 0 | 0 | 0
+

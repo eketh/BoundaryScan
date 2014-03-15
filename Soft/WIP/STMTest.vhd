@@ -60,7 +60,7 @@ constant IRData: std_logic_vector (Ilength downto 0):= "111111111"; --Instructio
 constant AllZeros: std_logic_vector(0 to 17):="000000000000000000"; -- czy da sie to robic nie w tak lopatologiczny sposob? :(
 
 constant data_TMS: std_logic_vector (0 to RunLength):= ToShiftIR & AllZeros(0 to (Ilength)) & ToShiftDR;--PO CO TO: & ToRun & "000";--ToShiftIR & AllZeros(0 to (Ilength-1)) & ToShiftDR & ToRun & "000";-- showing which bit is actually sent
-constant data_TDI: std_logic_vector (0 to RunLength):= "111111111111111111111111"; --AllZeros(0 to 4) & IRData & AllZeros(0 to 10);
+constant data_TDI: std_logic_vector (0 to RunLength):= "000000000011111111100000"; --AllZeros(0 to 4) & IRData & AllZeros(0 to 10);
 
 --co sprobowac w Quartusie:
 -- *kiedy dokladnie data_TDI wciaga instrukcje?

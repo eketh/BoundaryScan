@@ -1,0 +1,26 @@
+xst -intstyle ise -ifn "C:/sw_repo/Soft/BITgen/bit.xst" -ofn "C:/sw_repo/Soft/BITgen/bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc bit.ucf -p xc3s500e-fg320-5 bit.ngc bit.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc bit.ucf -p xc3s500e-fg320-5 bit.ngc bit.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o bit_map.ncd bit.ngd bit.pcf 
+par -w -intstyle ise -ol high -t 1 bit_map.ncd bit.ncd bit.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml bit.twx bit.ncd -o bit.twr bit.pcf -ucf bit.ucf 
+bitgen -intstyle ise -f bit.ut bit.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/BITgen/bit.xst" -ofn "C:/sw_repo/Soft/BITgen/bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc bit.ucf -p xc95144-PQ100-7 bit.ngc bit.ngd  
+cpldfit -intstyle ise -p xc95144-7-PQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk bit.ngd 
+XSLTProcess bit_build.xml 
+tsim -intstyle ise bit bit.nga 
+taengine -intstyle ise -f bit -w --format html1 -l bit_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n bit -i bit 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/BITgen/bit.xst" -ofn "C:/sw_repo/Soft/BITgen/bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc bit.ucf -p xc95144-PQ100-7 bit.ngc bit.ngd  
+cpldfit -intstyle ise -p xc95144-7-PQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk bit.ngd 
+XSLTProcess bit_build.xml 
+tsim -intstyle ise bit bit.nga 
+hprep6 -s IEEE1149 -n bit -i bit 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/BITgen/bit.xst" -ofn "C:/sw_repo/Soft/BITgen/bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc bit.ucf -p xc95144-PQ100-7 bit.ngc bit.ngd  
+cpldfit -intstyle ise -p xc95144-7-PQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk bit.ngd 
+XSLTProcess bit_build.xml 
+tsim -intstyle ise bit bit.nga 
+hprep6 -s IEEE1149 -n bit -i bit 

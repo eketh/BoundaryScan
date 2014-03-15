@@ -39,9 +39,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TAP_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Top_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Top_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Top_test_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Top_test_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Top_test_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Top_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cortex_data.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="cortex_data.stx"/>
@@ -59,14 +57,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1384705520" xil_pn:in_ck="-8688637159441150976" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1384705520">
+    <transform xil_pn:end_ts="1393277969" xil_pn:in_ck="6305149572216125605" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1393277969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="CortexIDRegister.vhd"/>
       <outfile xil_pn:name="InstructionRegister.vhd"/>
       <outfile xil_pn:name="JTAGTop.vhd"/>
@@ -75,62 +68,56 @@
       <outfile xil_pn:name="Top_Top.vhd"/>
       <outfile xil_pn:name="Top_test.vhd"/>
       <outfile xil_pn:name="boundary_scan_device.vhd"/>
+      <outfile xil_pn:name="bscell.vhd"/>
       <outfile xil_pn:name="cortex_data.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1384685075" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8629869154526163222" xil_pn:start_ts="1384685075">
+    <transform xil_pn:end_ts="1393277969" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5143668728754671046" xil_pn:start_ts="1393277969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1384685075" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2463884855044354924" xil_pn:start_ts="1384685075">
+    <transform xil_pn:end_ts="1393277969" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1668817313165068988" xil_pn:start_ts="1393277969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1382285481" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6444050689131442572" xil_pn:start_ts="1382285481">
+    <transform xil_pn:end_ts="1393277969" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="200935223501052440" xil_pn:start_ts="1393277969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1384686226" xil_pn:in_ck="-1820119103439125011" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1384686226">
+    <transform xil_pn:end_ts="1393277969" xil_pn:in_ck="6305149572216125605" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1393277969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="CortexIDRegister.vhd"/>
       <outfile xil_pn:name="InstructionRegister.vhd"/>
+      <outfile xil_pn:name="JTAGTop.vhd"/>
       <outfile xil_pn:name="TAP_tb.vhd"/>
       <outfile xil_pn:name="Top.vhd"/>
+      <outfile xil_pn:name="Top_Top.vhd"/>
       <outfile xil_pn:name="Top_test.vhd"/>
       <outfile xil_pn:name="boundary_scan_device.vhd"/>
+      <outfile xil_pn:name="bscell.vhd"/>
+      <outfile xil_pn:name="cortex_data.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1384686232" xil_pn:in_ck="-1820119103439125011" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5917671952841301996" xil_pn:start_ts="1384686226">
+    <transform xil_pn:end_ts="1393277975" xil_pn:in_ck="6305149572216125605" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5595094984219935540" xil_pn:start_ts="1393277969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Top_test_beh.prj"/>
-      <outfile xil_pn:name="Top_test_isim_beh.exe"/>
+      <outfile xil_pn:name="TAP_tb_beh.prj"/>
+      <outfile xil_pn:name="TAP_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1384686290" xil_pn:in_ck="1159541620115929484" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2253994915994721249" xil_pn:start_ts="1384686289">
+    <transform xil_pn:end_ts="1393277975" xil_pn:in_ck="1159541620115929484" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1696069917117368025" xil_pn:start_ts="1393277975">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Top_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="TAP_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>

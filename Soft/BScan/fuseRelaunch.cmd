@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/!DYPLOM/BScan/Top_test_isim_beh.exe" -prj "C:/!DYPLOM/BScan/Top_test_beh.prj" "work.Top_test" 
+-intstyle "ise" -incremental -o "C:/sw_repo/Soft/BScan/TAP_tb_isim_beh.exe" -prj "C:/sw_repo/Soft/BScan/TAP_tb_beh.prj" "work.TAP_tb" 

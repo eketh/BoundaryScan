@@ -1,7 +1,7 @@
 Release 14.6 Drc P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Feb 12 22:01:05 2014
+Wed Feb 12 22:42:37 2014
 
 drc -z STMTest_Quartus.ncd STMTest_Quartus.pcf
 

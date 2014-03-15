@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-NATALIA-PC::  Wed Feb 12 22:00:41 2014
+NATALIA-PC::  Wed Feb 12 22:42:14 2014
 
 par -w -intstyle ise -ol high -t 1 STMTest_Quartus_map.ncd STMTest_Quartus.ncd
 STMTest_Quartus.pcf 
@@ -43,7 +43,7 @@ Design Summary Report:
 
 
    Number of BUFGMUXs                        1 out of 24      4%
-   Number of Slices                         17 out of 4656    1%
+   Number of Slices                         19 out of 4656    1%
       Number of SLICEMs                      0 out of 2328    0%
 
 
@@ -62,36 +62,36 @@ Total REAL time at the beginning of Placer: 2 secs
 Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:adafb6f1) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:adafb732) REAL time: 3 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:adafb6f1) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:adafb732) REAL time: 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:adafb6f1) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:adafb732) REAL time: 3 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:bbe2a4e1) REAL time: 5 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:bbe2a522) REAL time: 5 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:bbe2a4e1) REAL time: 5 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:bbe2a522) REAL time: 5 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:bbe2a4e1) REAL time: 5 secs 
+Phase 6.36  Local Placement Optimization (Checksum:bbe2a522) REAL time: 5 secs 
 
 Phase 7.8  Global Placement
 ..
-Phase 7.8  Global Placement (Checksum:112aaceb) REAL time: 5 secs 
+Phase 7.8  Global Placement (Checksum:7c290f23) REAL time: 5 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:112aaceb) REAL time: 5 secs 
+Phase 8.5  Local Placement Optimization (Checksum:7c290f23) REAL time: 5 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:2ce90cba) REAL time: 5 secs 
+Phase 9.18  Placement Optimization (Checksum:8e31807d) REAL time: 5 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:2ce90cba) REAL time: 5 secs 
+Phase 10.5  Local Placement Optimization (Checksum:8e31807d) REAL time: 5 secs 
 
 Total REAL time to Placer completion: 5 secs 
 Total CPU  time to Placer completion: 5 secs 
@@ -102,13 +102,13 @@ Writing design to file STMTest_Quartus.ncd
 Starting Router
 
 
-Phase  1  : 146 unrouted;      REAL time: 11 secs 
+Phase  1  : 161 unrouted;      REAL time: 11 secs 
 
-Phase  2  : 132 unrouted;      REAL time: 11 secs 
+Phase  2  : 146 unrouted;      REAL time: 11 secs 
 
-Phase  3  : 24 unrouted;      REAL time: 11 secs 
+Phase  3  : 12 unrouted;      REAL time: 11 secs 
 
-Phase  4  : 30 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
+Phase  4  : 19 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
@@ -116,16 +116,16 @@ Updating file: STMTest_Quartus.ncd with current fully routed design.
 
 Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Total REAL time to Router completion: 12 secs 
-Total CPU time to Router completion: 12 secs 
+Total REAL time to Router completion: 13 secs 
+Total CPU time to Router completion: 13 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -143,7 +143,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X1Y11| No   |   13 |  0.021     |  0.131      |
+|           clk_BUFGP | BUFGMUX_X1Y11| No   |   14 |  0.022     |  0.131      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -163,8 +163,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     3.993ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     1.098ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     4.080ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     1.236ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -180,8 +180,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 13 secs 
-Total CPU time to PAR completion: 12 secs 
+Total REAL time to PAR completion: 14 secs 
+Total CPU time to PAR completion: 13 secs 
 
 Peak Memory Usage:  324 MB
 

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Reading design: STMTest_Quartus.prj
 
@@ -130,6 +130,7 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <STMTest_Quartus>.
     Related source file is "C:/sw_repo/Soft/WIP/STMTest.vhd".
+    Found 24x1-bit ROM for signal <TDI_jtag$rom0000> created at line 176.
     Found 24x1-bit ROM for signal <TMS$rom0000> created at line 62.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
@@ -155,7 +156,7 @@ Synthesizing Unit <STMTest_Quartus>.
     Found 1-bit register for signal <trigger_strobe>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred   1 ROM(s).
+	inferred   2 ROM(s).
 	inferred   1 Counter(s).
 	inferred   8 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
@@ -167,8 +168,8 @@ Unit <STMTest_Quartus> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 24x1-bit ROM                                          : 1
+# ROMs                                                 : 2
+ 24x1-bit ROM                                          : 2
 # Adders/Subtractors                                   : 1
  5-bit adder                                           : 1
 # Counters                                             : 1
@@ -201,8 +202,8 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 1
-# ROMs                                                 : 1
- 24x1-bit ROM                                          : 1
+# ROMs                                                 : 2
+ 24x1-bit ROM                                          : 2
 # Adders/Subtractors                                   : 1
  5-bit adder                                           : 1
 # Counters                                             : 1
@@ -261,14 +262,14 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 33
+# BELS                             : 37
 #      INV                         : 3
 #      LUT2                        : 1
-#      LUT2_L                      : 2
-#      LUT3                        : 5
+#      LUT2_L                      : 4
+#      LUT3                        : 4
 #      LUT3_D                      : 1
 #      LUT3_L                      : 2
-#      LUT4                        : 15
+#      LUT4                        : 18
 #      LUT4_L                      : 3
 #      MUXF5                       : 1
 # FlipFlops/Latches                : 16
@@ -287,9 +288,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       16  out of   4656     0%  
+ Number of Slices:                       18  out of   4656     0%  
  Number of Slice Flip Flops:             16  out of   9312     0%  
- Number of 4 input LUTs:                 32  out of   9312     0%  
+ Number of 4 input LUTs:                 36  out of   9312     0%  
  Number of IOs:                          14
  Number of bonded IOBs:                  14  out of    232     6%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -331,8 +332,8 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 4.524ns (Maximum Frequency: 221.038MHz)
-   Minimum input arrival time before clock: 2.373ns
-   Maximum output required time after clock: 5.696ns
+   Minimum input arrival time before clock: 3.276ns
+   Maximum output required time after clock: 5.683ns
    Maximum combinational path delay: 4.726ns
 
 Timing Detail:
@@ -342,7 +343,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 4.524ns (frequency: 221.038MHz)
-  Total number of paths / destination ports: 161 / 20
+  Total number of paths / destination ports: 171 / 20
 -------------------------------------------------------------------------
 Delay:               4.524ns (Levels of Logic = 3)
   Source:            clk_prescaler_5 (FF)
@@ -355,8 +356,8 @@ Delay:               4.524ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              5   0.514   0.690  clk_prescaler_5 (clk_prescaler_5)
-     LUT3_L:I0->LO         1   0.612   0.103  bit_count_not000127_SW0 (N16)
-     LUT4:I3->O            1   0.612   0.360  bit_count_not000127 (bit_count_not000127)
+     LUT3_L:I0->LO         1   0.612   0.103  bit_count_not000126_SW0 (N16)
+     LUT4:I3->O            1   0.612   0.360  bit_count_not000126 (bit_count_not000126)
      LUT4:I3->O            5   0.612   0.538  bit_count_not000148 (bit_count_not0001)
      FDCE:CE                   0.483          bit_count_0
     ----------------------------------------
@@ -367,7 +368,7 @@ Delay:               4.524ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              2.373ns (Levels of Logic = 2)
+Offset:              3.276ns (Levels of Logic = 3)
   Source:            button (PAD)
   Destination:       TDI_jtag (FF)
   Destination Clock: clk rising
@@ -376,32 +377,34 @@ Offset:              2.373ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.387  button_IBUF (button_IBUF)
-     LUT3:I2->O            1   0.612   0.000  TDI_jtag_mux00021 (TDI_jtag_mux0002)
+     IBUF:I->O             1   1.106   0.509  button_IBUF (button_IBUF)
+     LUT2_L:I0->LO         1   0.612   0.169  TDI_jtag_mux00020 (TDI_jtag_mux00020)
+     LUT4:I1->O            1   0.612   0.000  TDI_jtag_mux000260 (TDI_jtag_mux0002)
      FDC:D                     0.268          TDI_jtag
     ----------------------------------------
-    Total                      2.373ns (1.986ns logic, 0.387ns route)
-                                       (83.7% logic, 16.3% route)
+    Total                      3.276ns (2.598ns logic, 0.678ns route)
+                                       (79.3% logic, 20.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 14 / 6
 -------------------------------------------------------------------------
-Offset:              5.696ns (Levels of Logic = 2)
-  Source:            state_FSM_FFd2 (FF)
-  Destination:       state_led2 (PAD)
+Offset:              5.683ns (Levels of Logic = 3)
+  Source:            state_FSM_FFd1 (FF)
+  Destination:       TCK (PAD)
   Source Clock:      clk rising
 
-  Data Path: state_FSM_FFd2 to state_led2
+  Data Path: state_FSM_FFd1 to TCK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             10   0.514   0.902  state_FSM_FFd2 (state_FSM_FFd2)
-     LUT2:I0->O            4   0.612   0.499  state_FSM_Out01 (state_led2_OBUF)
-     OBUF:I->O                 3.169          state_led2_OBUF (state_led2)
+     FDC:C->Q             10   0.514   0.753  state_FSM_FFd1 (state_FSM_FFd1)
+     LUT4:I3->O            1   0.612   0.000  sTCK2 (sTCK1)
+     MUXF5:I0->O           1   0.278   0.357  sTCK_f5 (TCK_OBUF)
+     OBUF:I->O                 3.169          TCK_OBUF (TCK)
     ----------------------------------------
-    Total                      5.696ns (4.295ns logic, 1.401ns route)
-                                       (75.4% logic, 24.6% route)
+    Total                      5.683ns (4.573ns logic, 1.110ns route)
+                                       (80.5% logic, 19.5% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -424,12 +427,12 @@ Delay:               4.726ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.04 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.72 secs
  
 --> 
 
-Total memory usage is 257260 kilobytes
+Total memory usage is 257636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

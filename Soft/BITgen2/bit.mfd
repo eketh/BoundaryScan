@@ -1,0 +1,9 @@
+MDF Database:  version 1.0
+MDF_INFO | bit | XC95144-7-PQ100
+MACROCELL | 0 | 1 | a_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 0
+EQ | 1 | 
+   a = Vcc;
+
+PIN | a | 536871040 | 0 | N/A | 18

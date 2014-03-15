@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\sw_repo\Soft\BITgen\bit.ncd
+OUTFILE=C:\sw_repo\Soft\BITgen\bit.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=C:\sw_repo\Soft\BITgen
+LICENSE=WebPack
+USER_INFO=206763111_0_0_072
