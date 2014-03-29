@@ -46,18 +46,15 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="STMTest_Quartus.ngc"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="STMTest_Quartus.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="STMTest_Quartus.ngr"/>
-    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="STMTest_Quartus.pad"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="STMTest_Quartus.par" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="STMTest_Quartus.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="STMTest_Quartus.prj"/>
-    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="STMTest_Quartus.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="STMTest_Quartus.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="STMTest_Quartus.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="STMTest_Quartus.twr" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="STMTest_Quartus.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="STMTest_Quartus.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="STMTest_Quartus.ut" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:fileType="FILE_XPI" xil_pn:name="STMTest_Quartus.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="STMTest_Quartus.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="STMTest_Quartus_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="STMTest_Quartus_guide.ncd" xil_pn:origination="imported"/>
@@ -65,14 +62,9 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="STMTest_Quartus_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="STMTest_Quartus_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="STMTest_Quartus_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STMTest_Quartus_map.xrpt"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STMTest_Quartus_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="STMTest_Quartus_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="STMTest_Quartus_pad.txt" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STMTest_Quartus_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="STMTest_Quartus_summary.html"/>
-    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="STMTest_Quartus_summary.xml"/>
-    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="STMTest_Quartus_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="STMTest_Quartus_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STMTest_Quartus_xst.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="STMTest_envsettings.html"/>
@@ -91,6 +83,44 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="STMTest_tb_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="STMTest_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STMTest_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="STM_Quartus.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="STM_Quartus.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="STM_Quartus.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="STM_Quartus.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="STM_Quartus.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="STM_Quartus.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="STM_Quartus.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="STM_Quartus.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="STM_Quartus.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="STM_Quartus.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="STM_Quartus.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="STM_Quartus.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="STM_Quartus.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="STM_Quartus.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="STM_Quartus.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="STM_Quartus.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="STM_Quartus.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="STM_Quartus.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="STM_Quartus.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="STM_Quartus.xst"/>
+    <file xil_pn:fileType="FILE_BLIF" xil_pn:name="STM_Quartus_cs.blc"/>
+    <file xil_pn:fileType="FILE_NGC" xil_pn:name="STM_Quartus_cs.ngc"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="STM_Quartus_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="STM_Quartus_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="STM_Quartus_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="STM_Quartus_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="STM_Quartus_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="STM_Quartus_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STM_Quartus_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STM_Quartus_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="STM_Quartus_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="STM_Quartus_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STM_Quartus_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="STM_Quartus_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="STM_Quartus_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="STM_Quartus_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="STM_Quartus_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="STM_Quartus_xst.xrpt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -102,6 +132,9 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="stm_quartus.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="stm_quartus.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="stm_quartus.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="stmtest.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="stmtest.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="stmtest.drc" xil_pn:subbranch="FPGAConfiguration"/>
@@ -121,11 +154,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1392231606" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3514446089170909038" xil_pn:start_ts="1392231605">
+    <transform xil_pn:end_ts="1395598248" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3020481724792084526" xil_pn:start_ts="1395598248">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1392231606" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="638184859483271253" xil_pn:start_ts="1392231606">
+    <transform xil_pn:end_ts="1395598248" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3374835476269308139" xil_pn:start_ts="1395598248">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -133,7 +166,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1392231606" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8280634894311971436" xil_pn:start_ts="1392231606">
+    <transform xil_pn:end_ts="1395598248" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="2922957252965248044" xil_pn:start_ts="1395598248">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -141,98 +174,103 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1392231606" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3084496590335864289" xil_pn:start_ts="1392231606">
+    <transform xil_pn:end_ts="1395598248" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7666179837565842399" xil_pn:start_ts="1395598248">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1392241317" xil_pn:in_ck="131131628957714980" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8069940093315952440" xil_pn:start_ts="1392241303">
+    <transform xil_pn:end_ts="1395600452" xil_pn:in_ck="131131628957714980" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7075900718970867336" xil_pn:start_ts="1395600441">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="STMTest.ngr"/>
-      <outfile xil_pn:name="STMTest_Quartus.lso"/>
-      <outfile xil_pn:name="STMTest_Quartus.ngc"/>
-      <outfile xil_pn:name="STMTest_Quartus.ngr"/>
-      <outfile xil_pn:name="STMTest_Quartus.prj"/>
-      <outfile xil_pn:name="STMTest_Quartus.stx"/>
-      <outfile xil_pn:name="STMTest_Quartus.syr"/>
-      <outfile xil_pn:name="STMTest_Quartus.xst"/>
-      <outfile xil_pn:name="STMTest_Quartus_vhdl.prj"/>
-      <outfile xil_pn:name="STMTest_Quartus_xst.xrpt"/>
+      <outfile xil_pn:name="STM_Quartus.lso"/>
+      <outfile xil_pn:name="STM_Quartus.ngc"/>
+      <outfile xil_pn:name="STM_Quartus.ngr"/>
+      <outfile xil_pn:name="STM_Quartus.prj"/>
+      <outfile xil_pn:name="STM_Quartus.stx"/>
+      <outfile xil_pn:name="STM_Quartus.syr"/>
+      <outfile xil_pn:name="STM_Quartus.xst"/>
+      <outfile xil_pn:name="STM_Quartus_vhdl.prj"/>
+      <outfile xil_pn:name="STM_Quartus_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1392231621" xil_pn:in_ck="181471103435551845" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-6267212739265240809" xil_pn:start_ts="1392231621">
+    <transform xil_pn:end_ts="1395598257" xil_pn:in_ck="181471103435551845" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-56604981880384809" xil_pn:start_ts="1395598256">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1392241325" xil_pn:in_ck="-6871112908072382899" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3266426096663596296" xil_pn:start_ts="1392241317">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1395601241" xil_pn:in_ck="3735154362788134490" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2312317930941348808" xil_pn:start_ts="1395601034">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="STMTest_Quartus.bld"/>
-      <outfile xil_pn:name="STMTest_Quartus.ngd"/>
-      <outfile xil_pn:name="STMTest_Quartus_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="STM_Quartus.bld"/>
+      <outfile xil_pn:name="STM_Quartus.ngd"/>
+      <outfile xil_pn:name="STM_Quartus_cs.blc"/>
+      <outfile xil_pn:name="STM_Quartus_cs.ngc"/>
+      <outfile xil_pn:name="STM_Quartus_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1392241332" xil_pn:in_ck="-7716919086840104081" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1392241325">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1395598594" xil_pn:in_ck="-7973247080344775362" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1395598585">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="STMTest_Quartus.pcf"/>
-      <outfile xil_pn:name="STMTest_Quartus_map.map"/>
-      <outfile xil_pn:name="STMTest_Quartus_map.mrp"/>
-      <outfile xil_pn:name="STMTest_Quartus_map.ncd"/>
-      <outfile xil_pn:name="STMTest_Quartus_map.ngm"/>
-      <outfile xil_pn:name="STMTest_Quartus_map.xrpt"/>
-      <outfile xil_pn:name="STMTest_Quartus_summary.xml"/>
-      <outfile xil_pn:name="STMTest_Quartus_usage.xml"/>
+      <outfile xil_pn:name="STM_Quartus.pcf"/>
+      <outfile xil_pn:name="STM_Quartus_map.map"/>
+      <outfile xil_pn:name="STM_Quartus_map.mrp"/>
+      <outfile xil_pn:name="STM_Quartus_map.ncd"/>
+      <outfile xil_pn:name="STM_Quartus_map.ngm"/>
+      <outfile xil_pn:name="STM_Quartus_map.xrpt"/>
+      <outfile xil_pn:name="STM_Quartus_summary.xml"/>
+      <outfile xil_pn:name="STM_Quartus_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1392241354" xil_pn:in_ck="2685162131805294145" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1392241332">
+    <transform xil_pn:end_ts="1395598615" xil_pn:in_ck="390505944941282505" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1395598594">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="STMTest_Quartus.ncd"/>
-      <outfile xil_pn:name="STMTest_Quartus.pad"/>
-      <outfile xil_pn:name="STMTest_Quartus.par"/>
-      <outfile xil_pn:name="STMTest_Quartus.ptwx"/>
-      <outfile xil_pn:name="STMTest_Quartus.unroutes"/>
-      <outfile xil_pn:name="STMTest_Quartus.xpi"/>
-      <outfile xil_pn:name="STMTest_Quartus_pad.csv"/>
-      <outfile xil_pn:name="STMTest_Quartus_pad.txt"/>
-      <outfile xil_pn:name="STMTest_Quartus_par.xrpt"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="STM_Quartus.ncd"/>
+      <outfile xil_pn:name="STM_Quartus.pad"/>
+      <outfile xil_pn:name="STM_Quartus.par"/>
+      <outfile xil_pn:name="STM_Quartus.ptwx"/>
+      <outfile xil_pn:name="STM_Quartus.unroutes"/>
+      <outfile xil_pn:name="STM_Quartus.xpi"/>
+      <outfile xil_pn:name="STM_Quartus_pad.csv"/>
+      <outfile xil_pn:name="STM_Quartus_pad.txt"/>
+      <outfile xil_pn:name="STM_Quartus_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1392241370" xil_pn:in_ck="-2627909301358870846" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1392241354">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1395598645" xil_pn:in_ck="7644375148756186221" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1395598615">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="STMTest_Quartus.ut"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="STM_Quartus.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="stmtest_quartus.bgn"/>
-      <outfile xil_pn:name="stmtest_quartus.bit"/>
-      <outfile xil_pn:name="stmtest_quartus.drc"/>
+      <outfile xil_pn:name="stm_quartus.bgn"/>
+      <outfile xil_pn:name="stm_quartus.bit"/>
+      <outfile xil_pn:name="stm_quartus.drc"/>
       <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1394176729" xil_pn:in_ck="-4601643369866675402" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1394176727">
+    <transform xil_pn:end_ts="1395599410" xil_pn:in_ck="3016213707803120171" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1395599408">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1392063717" xil_pn:in_ck="181673692852977089" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="4571255253149746244" xil_pn:start_ts="1392063716">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1395599658" xil_pn:in_ck="3016213707803120171" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-2312317930941348808" xil_pn:start_ts="1395599658">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
     </transform>
-    <transform xil_pn:end_ts="1392241354" xil_pn:in_ck="-6750967931758217753" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1392241350">
+    <transform xil_pn:end_ts="1395598615" xil_pn:in_ck="8649430558194805426" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1395598611">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="STMTest_Quartus.twr"/>
-      <outfile xil_pn:name="STMTest_Quartus.twx"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="STM_Quartus.twr"/>
+      <outfile xil_pn:name="STM_Quartus.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>

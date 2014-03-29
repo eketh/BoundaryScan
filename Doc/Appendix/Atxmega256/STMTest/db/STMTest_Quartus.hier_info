@@ -1,0 +1,47 @@
+|STMTest_Quartus
+clk => TMS~reg0.CLK
+clk => TDI_jtag~reg0.CLK
+clk => bit_count[0].CLK
+clk => bit_count[1].CLK
+clk => bit_count[2].CLK
+clk => bit_count[3].CLK
+clk => bit_count[4].CLK
+clk => clk_prescaler[0].CLK
+clk => clk_prescaler[1].CLK
+clk => clk_prescaler[2].CLK
+clk => clk_prescaler[3].CLK
+clk => clk_prescaler[4].CLK
+clk => clk_prescaler[5].CLK
+clk => trigger_strobe.CLK
+clk => state~1.DATAIN
+reset => TRST.DATAIN
+reset => reset_led.DATAIN
+reset => clk_prescaler[0].ACLR
+reset => clk_prescaler[1].ACLR
+reset => clk_prescaler[2].ACLR
+reset => clk_prescaler[3].ACLR
+reset => clk_prescaler[4].ACLR
+reset => clk_prescaler[5].ACLR
+reset => TMS~reg0.PRESET
+reset => TDI_jtag~reg0.ACLR
+reset => trigger_strobe.ACLR
+reset => bit_count[0].ACLR
+reset => bit_count[1].ACLR
+reset => bit_count[2].ACLR
+reset => bit_count[3].ACLR
+reset => bit_count[4].ACLR
+reset => state~3.DATAIN
+trigger => trigger_strobe.DATAIN
+button => TDI_jtag.DATAB
+TDO_jtag => TDO_led.DATAIN
+TDI_jtag <= TDI_jtag~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TMS <= TMS~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TRST <= reset.DB_MAX_OUTPUT_PORT_TYPE
+TCK <= sTCK.DB_MAX_OUTPUT_PORT_TYPE
+TDO_led <= TDO_jtag.DB_MAX_OUTPUT_PORT_TYPE
+reset_led <= reset.DB_MAX_OUTPUT_PORT_TYPE
+state_led1 <= state_led1.DB_MAX_OUTPUT_PORT_TYPE
+state_led2 <= state_led2.DB_MAX_OUTPUT_PORT_TYPE
+state_led3 <= state_led3.DB_MAX_OUTPUT_PORT_TYPE
+
+

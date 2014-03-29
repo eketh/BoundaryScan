@@ -1,0 +1,55 @@
+Release 14.6 ngdbuild P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5
+STM_Quartus_cs.ngc STM_Quartus.ngd
+
+Reading NGO file "C:/sw_repo/Soft/WIP/STM_Quartus_cs.ngc" ...
+ERROR:NgdBuild:1317 - Using core chipscope_ila_v1 requires a ChipScopePro
+   license.  The following blocks are instances of core chipscope_ila_v1:
+	/STM_Quartus/U_ila_pro_0
+
+-----------------------------------------------
+INFO:Security:71 - If a license for part 'xc3s500e' is available, it will be
+possible to use 'ChipScopePro_TDP' instead of 'ChipScopePro'.
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is Natalia, on host NATALIA-PC.
+WARNING:Security:9b - No 'ChipScopePro' feature version 2013.06 was available
+for part 'xc3s500e'.
+ERROR:Security:12 - No 'xc3s500e' feature version 2013.06 was available (-15),
+     so 'ChipScopePro_TDP' may not be used.
+
+-----------------------------------------------
+Cannot connect to license server system.
+ The license server manager (lmgrd) has not been started yet,
+ the wrong port@host or license file is being used, or the
+ port or hostname in the license file has been changed.
+Feature:       ChipScopePro
+Server name:   localhost
+License path: 
+C:/.Xilinx\Xilinx.lic;C:\Xilinx\14.6\ISE_DS\ISE\/coregen/core_licenses\Xilinx.li
+c;C:\Xilinx\14.6\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;C:\Xilinx\14.6
+\ISE_DS\EDK/data/core_licenses\Xilinx.lic;@localhost;
+FLEXnet Licensing error:-15,570
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.flexerasoftware.com".Cannot connect to license server system.
+ The license server manager (lmgrd) has not been started yet,
+ the wrong port@host or license file is being used, or the
+ port or hostname in the license file has been changed.
+Feature:       xc3s500e
+Server name:   localhost
+License path: 
+C:/.Xilinx\Xilinx.lic;C:\Xilinx\14.6\ISE_DS\ISE\/coregen/core_licenses\Xilinx.li
+c;C:\Xilinx\14.6\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;C:\Xilinx\14.6
+\ISE_DS\EDK/data/core_licenses\Xilinx.lic;@localhost;
+FLEXnet Licensing error:-15,570
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.flexerasoftware.com".
+-----------------------------------------------
+ERROR:NgdBuild:1316 - A problem was encountered attempting to get the
+   ChipScopePro license. 
