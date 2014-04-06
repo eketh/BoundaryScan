@@ -1,0 +1,9 @@
+Wstep:
+
+- ??? czy byly przed jtagiem podobne standardy?
+- temat wiecznie aktualny
+- zlozonosc zagadnienia, równiez "historyczna"
+- brak opracowan poza ulotkami producentów sprzetu
+- b. duzo fragmentarycznej, rozproszonej wiedzy
+- b. duzo projektów open source, szeroki rynek
+- pewny rozwój branzy wraz z rozwojem technologii
