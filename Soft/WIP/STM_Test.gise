@@ -182,6 +182,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="STMTest.ngr"/>
       <outfile xil_pn:name="STM_Quartus.lso"/>
       <outfile xil_pn:name="STM_Quartus.ngc"/>
@@ -200,19 +202,17 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1395601241" xil_pn:in_ck="3735154362788134490" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2312317930941348808" xil_pn:start_ts="1395601034">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1398153898" xil_pn:in_ck="8642953513111790331" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2312317930941348808" xil_pn:start_ts="1398153888">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="STM_Quartus.bld"/>
       <outfile xil_pn:name="STM_Quartus.ngd"/>
-      <outfile xil_pn:name="STM_Quartus_cs.blc"/>
-      <outfile xil_pn:name="STM_Quartus_cs.ngc"/>
       <outfile xil_pn:name="STM_Quartus_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1395598594" xil_pn:in_ck="-7973247080344775362" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1395598585">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1398153910" xil_pn:in_ck="-7973247080344775362" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1398153898">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="STM_Quartus.pcf"/>
       <outfile xil_pn:name="STM_Quartus_map.map"/>
@@ -224,10 +224,9 @@
       <outfile xil_pn:name="STM_Quartus_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1395598615" xil_pn:in_ck="390505944941282505" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1395598594">
+    <transform xil_pn:end_ts="1398153937" xil_pn:in_ck="390505944941282505" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1398153910">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="STM_Quartus.ncd"/>
       <outfile xil_pn:name="STM_Quartus.pad"/>
       <outfile xil_pn:name="STM_Quartus.par"/>
@@ -239,12 +238,9 @@
       <outfile xil_pn:name="STM_Quartus_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1395598645" xil_pn:in_ck="7644375148756186221" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1395598615">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1398153967" xil_pn:in_ck="7644375148756186221" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1398153937">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="STM_Quartus.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="stm_quartus.bgn"/>
@@ -254,21 +250,21 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1395599410" xil_pn:in_ck="3016213707803120171" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1395599408">
+    <transform xil_pn:end_ts="1398156003" xil_pn:in_ck="3016213707803120171" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1398153967">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1395599658" xil_pn:in_ck="3016213707803120171" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-2312317930941348808" xil_pn:start_ts="1395599658">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForced"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1395598615" xil_pn:in_ck="8649430558194805426" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1395598611">
+    <transform xil_pn:end_ts="1398153937" xil_pn:in_ck="8649430558194805426" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1398153932">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="STM_Quartus.twr"/>
       <outfile xil_pn:name="STM_Quartus.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
