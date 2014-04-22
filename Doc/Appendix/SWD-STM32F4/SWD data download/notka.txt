@@ -1,0 +1,17 @@
+
+Waveform 0001 - przebieg w trakcie zapisu
+Kolejnosc troche losowa: 1,4,2,3,5,6
+
+- przeanalizowalam 6 sekwencji
+- wysylana sekwencja na kazdym przebiegu poza 2 (???):
+
+1101:0001 (AP + write + A(3)=0,A(2)=1 -> prawdopodobnie TAR)
+
+1111:1001 x2 (AP,read, 0b11= 0xC - data read/write (DRW))
+
+1011:1101 (DP, read, 0xC = rdbuff)
+
+Do sprawdzenia:
+
+-czy adresy w TAR ida po kolei???
+-co DOKLADNIE jest wysylane? 
