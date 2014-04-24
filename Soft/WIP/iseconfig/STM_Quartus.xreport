@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-04-22T09:50:54</DateModified>
+  <DateModified>2014-04-24T09:22:48</DateModified>
   <ModuleName>STM_Quartus</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/sw_repo/Soft/WIP/iseconfig/STM_Quartus.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/sw_repo/Soft/WIP</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/sw_repo/Soft/WIP\</ImplementationReportsDirectory>
   <DateInitialized>2014-04-22T09:50:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

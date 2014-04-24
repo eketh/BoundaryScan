@@ -13,23 +13,41 @@ use ieee.std_logic_unsigned.all;
 -- TRST - active low reset signal sent to JTAG.
 -- TCK - clock signal sent to JTAG.
 --**********************************************************************************************************************************************************
+-- 22 IV 2014
+--
+-- Defeated my laziness and started writing module for rapid prototyping of SWD protocol.
+-- Worship me.
+--**********************************************************************************************************************************************************
+-- For SWD, we connect only TCK and TMS, ignoring other pins.
+-- Left them just in case.
+--**********************************************************************************************************************************************************
+-- VARIA
+-- JTAG-to-SWD sequence is, according to ST's manual (RM0090, a.k.a. Mother Of All ST Manuals):
+-- 1. Send more than 50 TCK cycles with TMS (SWDIO) = 1
+-- 2. Send the 16-bit sequence on TMS (SWDIO) = 0111100111100111 (MSB transmitted first)
+-- 3. Send more than 50 TCK cycles with TMS (SWDIO) = 1
+-- Marked this as ToSwd to maintain the naming convence
+--**********************************************************************************************************************************************************
 
 entity STM_Quartus is
 port(
-  clk: in std_logic;
-  reset: in std_logic;
-  trigger: in std_logic;
-  button: in std_logic;
-  TDO_jtag: in std_logic;
-  TDI_jtag: out std_logic;
-  TMS: out std_logic;
-  TRST: out std_logic;
-  TCK: out std_logic;
-  TDO_led: out std_logic;
-  reset_led: out std_logic;
-  state_led1: out std_logic;
-  state_led2: out std_logic;
-  state_led3: out std_logic
+  clk : in std_logic;
+  reset : in std_logic;
+  trigger : in std_logic;
+  button : in std_logic;
+--  TDO_jtag: in std_logic;
+--  TDI_jtag: out std_logic;
+  TMS : inout std_logic; --inout for SWD
+  TRST : out std_logic;
+  TCK : out std_logic;
+--  TDO_led: out std_logic;
+  reset_led : out std_logic;
+  state_led1 : out std_logic;
+  state_led2 : out std_logic;
+  state_led3 : out std_logic;
+-- Output port capturing inout's response
+-- may not be needed!
+  SWD_out : out std_logic
 );
 end STM_Quartus;
 
@@ -39,17 +57,30 @@ type states is (sReset, sRun, sDataReg);
 signal state, next_state: states;
 
 --reverse to make TAP state machine trackable.
-constant ToIR: std_logic_vector (0 to 9):= "1110001100";
-constant IRtoDR: std_logic_vector (0 to 4):= "11100";
-constant ToRun: std_logic_vector (0 to 2):="110";
-constant DRtoDR: std_logic_vector(0 to 4):="11100";
-constant DRtoIR: std_logic_vector(0 to 5):="111100";
+--constant ToIR: std_logic_vector (0 to 9):= "1110001100";
+--constant IRtoDR: std_logic_vector (0 to 4):= "11100";
+--constant ToRun: std_logic_vector (0 to 2):= "110";
+--constant DRtoDR: std_logic_vector(0 to 4):= "11100";
+--constant DRtoIR: std_logic_vector(0 to 5):= "111100";
 
-constant ILength: integer :=3;
-constant RunLength: integer:=18;
+--constant ILength: integer := 3;
+constant RunLength: integer:= 143;
 
-constant IRData1: std_logic_vector (0 to ILength):= "1100";-- 3=IDCODE
+--constant IRData1: std_logic_vector (0 to ILength):= "1100";-- 3=IDCODE
 --constant IRData2: std_logic_vector (0 to ILength):= "110111111";-- APACC
+
+constant Zeros: std_logic_vector(0 to 59) := "000000000000000000000000000000000000000000000000000000000000"; -- czy da sie to robic nie w tak lopatologiczny sposob? 
+constant SWDSeq: std_logic_vector (0 to 15) := "0111100111100111"; -- MSB first - this may be cumbersome...
+constant IDCode: std_logic_vector (0 to 7) := "10100100"; -- DP access, read, register 0x00 = IDCODE
+constant ToSWD: std_logic_vector (0 to 135) := NOT Zeros & SWDSeq & NOT Zeros;
+
+-- For future applications: read processor ID
+-- based on captured data saved in swd_tek2_marked.png
+constant ReadIDAddress: std_logic_vector (0 to 7) := "11010001";
+constant IDAddress: std_logic_vector (0 to 32) := "000000000000010000100000000001111"; -- Address= 0xE0042000, parity bit = 1
+constant ReadRegister: std_logic_vector (0 to 7) := "11111001"; -- surround it w/few IDLE cycles with TDIO=1 not to get BUSY ACK!
+constant ReadDPBuffer: std_logic_vector (0 to 7) := "10111101";
+
 
 --constant DPData1: std_logic_vector (0 to 35):="010000001000000000000000000000010100"; --ctrl/stat reg.value
 --constant DPData2: std_logic_vector (0 to 35):="001000000000000000000000000000000000"; --ap select
@@ -58,11 +89,11 @@ constant IRData1: std_logic_vector (0 to ILength):= "1100";-- 3=IDCODE
 --constant APData3: std_logic_vector (0 to 35):="011000000000000000000000000000101010"; --write + CSW + XXXX...
 --constant APData4: std_logic_vector (0 to 35):="111000000000000000000000000000000000"; --read + CSW + XXXX...
 
-constant Zeros: std_logic_vector(0 to 35):="000000000000000000000000000000000000"; -- czy da sie to robic nie w tak lopatologiczny sposob? 
 
-constant data_TMS: std_logic_vector (0 to RunLength):= ToIR & Zeros(0 to Ilength) & IRtoDR;-- & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoIR & zeros(0 to ILength) & IRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR;
 
-constant data_TDI: std_logic_vector (0 to RunLength):= Zeros(0 to 10) & IRData1 & zeros(0 to 3);-- & DPData1 & zeros(0 to 4) & DPData2 & zeros(0 to 5) & IRData2 & zeros(0 to 4) & APData1 & Zeros (0 to 4) & APData2 & Zeros (0 to 4) & APData3 & Zeros (0 to 4) & APData4 & Zeros (0 to 4) & APData4 & Zeros (0 to 4) & APData4 & Zeros (0 to 4)  & APData4 & Zeros (0 to 3);
+constant data_TMS: std_logic_vector (0 to RunLength):= ToSWD & IDCode;-- & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoIR & zeros(0 to ILength) & IRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR;
+
+--constant data_TDI: std_logic_vector (0 to RunLength):= Zeros(0 to 10) & IRData1 & zeros(0 to 3);-- & DPData1 & zeros(0 to 4) & DPData2 & zeros(0 to 5) & IRData2 & zeros(0 to 4) & APData1 & Zeros (0 to 4) & APData2 & Zeros (0 to 4) & APData3 & Zeros (0 to 4) & APData4 & Zeros (0 to 4) & APData4 & Zeros (0 to 4) & APData4 & Zeros (0 to 4)  & APData4 & Zeros (0 to 3);
 
 --prescaler values for TCK.
 constant max_prescaler: integer := 49;
@@ -165,31 +196,35 @@ end process fsm;
 
 datareg: process (clk, reset)
 begin
-if (reset='0') then
-  TDI_jtag<='0';
-  TMS<='1';
-elsif (clk'event and clk='1') then
-  if (state=sRun) then
-    TDI_jtag<= data_TDI(bit_count);
-    TMS<= data_TMS(bit_count);	
-  elsif (state=sDataReg) then
-    TDI_jtag<=button;
-    TMS<='0';
+if (reset = '0') then
+--TDI_jtag<='0';
+  TMS <= '1';
+  SWD_out <= '1';
+elsif (clk'event and clk = '1') then
+  if (state = sRun) then
+--  TDI_jtag<= data_TDI(bit_count);
+    TMS <= data_TMS(bit_count);	
+	 SWD_out <= '1';
+  elsif (state = sDataReg) then
+--  TDI_jtag<=button;
+--    TMS<='1';
+	 SWD_out<=TMS;
   else
-    TDI_jtag<='0';
+--  TDI_jtag<='0';
     TMS<='1';
+    SWD_out <= '1';	 
   end if;
 end if;
 end process datareg;
 
-sTCK<= '0' when (state /= sReset and clk_prescaler<half_prescaler) else '1';
-TCK<=sTCK;
-TRST<=reset;
-TDO_led<=TDO_jtag;
-reset_led<=reset;
-state_led1<='1' when (state=sReset) else '0';
-state_led2<='1' when (state=sRun) else '0';
-state_led3<='1' when (state=sDataReg) else '0';
+sTCK <= '0' when (state /= sReset and clk_prescaler<half_prescaler) else '1';
+TCK <= sTCK;
+TRST <= reset;
+--TDO_led<=TDO_jtag;
+reset_led <= reset;
+state_led1 <= '1' when (state=sReset) else '0';
+state_led2 <= '1' when (state=sRun) else '0';
+state_led3 <= '1' when (state=sDataReg) else '0';
 
 --TMS<= data_TMS(bit_count);
 --TDI_jtag<= data_TDI(bit_count);

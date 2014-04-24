@@ -45,8 +45,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-button      |    1.568(R)|   -0.134(R)|clk_BUFGP         |   0.000|
-trigger     |    0.816(R)|    0.467(R)|clk_BUFGP         |   0.000|
+trigger     |    0.770(R)|    0.505(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -54,12 +53,12 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-TCK         |   11.840(R)|clk_BUFGP         |   0.000|
-TDI_jtag    |   10.399(R)|clk_BUFGP         |   0.000|
-TMS         |   10.551(R)|clk_BUFGP         |   0.000|
-state_led1  |    8.299(R)|clk_BUFGP         |   0.000|
-state_led2  |    9.061(R)|clk_BUFGP         |   0.000|
-state_led3  |    8.207(R)|clk_BUFGP         |   0.000|
+SWD_out     |    9.906(R)|clk_BUFGP         |   0.000|
+TCK         |   11.615(R)|clk_BUFGP         |   0.000|
+TMS         |   10.421(R)|clk_BUFGP         |   0.000|
+state_led1  |    7.853(R)|clk_BUFGP         |   0.000|
+state_led2  |    9.823(R)|clk_BUFGP         |   0.000|
+state_led3  |    8.798(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -67,27 +66,26 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.165|         |         |         |
+clk            |    4.650|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-TDO_jtag       |TDO_led        |    5.647|
-reset          |TRST           |    9.287|
-reset          |reset_led      |    8.519|
+reset          |TRST           |    9.284|
+reset          |reset_led      |    8.515|
 ---------------+---------------+---------+
 
 
-Analysis completed Tue Apr 22 10:05:36 2014 
+Analysis completed Thu Apr 24 10:01:53 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 165 MB
+Peak Memory Usage: 164 MB
 
 
 

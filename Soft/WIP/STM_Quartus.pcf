@@ -1,21 +1,19 @@
 //! **************************************************************************
-// Written by: Map P.68d on Tue Apr 22 10:05:07 2014
+// Written by: Map P.68d on Thu Apr 24 10:01:24 2014
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "TDO_led" LOCATE = SITE "E9" LEVEL 1;
 COMP "clk" LOCATE = SITE "C9" LEVEL 1;
-COMP "TDI_jtag" LOCATE = SITE "E7" LEVEL 1;
 COMP "TRST" LOCATE = SITE "F7" LEVEL 1;
 COMP "TCK" LOCATE = SITE "C5" LEVEL 1;
 COMP "state_led1" LOCATE = SITE "D11" LEVEL 1;
 COMP "state_led2" LOCATE = SITE "C11" LEVEL 1;
 COMP "state_led3" LOCATE = SITE "F11" LEVEL 1;
 COMP "TMS" LOCATE = SITE "A6" LEVEL 1;
-COMP "TDO_jtag" LOCATE = SITE "B6" LEVEL 1;
 COMP "trigger" LOCATE = SITE "L14" LEVEL 1;
 COMP "button" LOCATE = SITE "L13" LEVEL 1;
 COMP "reset" LOCATE = SITE "N17" LEVEL 1;
+COMP "SWD_out" LOCATE = SITE "B6" LEVEL 1;
 COMP "reset_led" LOCATE = SITE "F9" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
