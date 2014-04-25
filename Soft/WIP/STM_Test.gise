@@ -231,6 +231,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="STM_Quartus.pcf"/>
       <outfile xil_pn:name="STM_Quartus_map.map"/>
       <outfile xil_pn:name="STM_Quartus_map.mrp"/>
