@@ -1,6 +1,6 @@
 V3 3
-FL C:/sw_repo/Soft/WIP/STMTest.vhd 2014/04/24.09:58:42 P.68d
-EN work/STM_Quartus 1398326345 FL C:/sw_repo/Soft/WIP/STMTest.vhd \
+FL C:/sw_repo/Soft/WIP/STMTest.vhd 2014/04/29.09:20:19 P.68d
+EN work/STM_SWD 1398756067 FL C:/sw_repo/Soft/WIP/STMTest.vhd \
       PB ieee/std_logic_1164 1370735607 PB ieee/STD_LOGIC_UNSIGNED 1370735609
-AR work/STM_Quartus/STMTest_a 1398326346 \
-      FL C:/sw_repo/Soft/WIP/STMTest.vhd EN work/STM_Quartus 1398326345
+AR work/STM_SWD/STM_SWD_a 1398756068 \
+      FL C:/sw_repo/Soft/WIP/STMTest.vhd EN work/STM_SWD 1398756067

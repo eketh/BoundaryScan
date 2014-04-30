@@ -45,7 +45,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-trigger     |    0.770(R)|    0.505(R)|clk_BUFGP         |   0.000|
+trigger     |    0.358(R)|    0.844(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -53,12 +53,12 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-SWD_out     |    9.906(R)|clk_BUFGP         |   0.000|
-TCK         |   11.615(R)|clk_BUFGP         |   0.000|
-TMS         |   10.421(R)|clk_BUFGP         |   0.000|
-state_led1  |    7.853(R)|clk_BUFGP         |   0.000|
-state_led2  |    9.823(R)|clk_BUFGP         |   0.000|
-state_led3  |    8.798(R)|clk_BUFGP         |   0.000|
+SWD_out     |    8.928(R)|clk_BUFGP         |   0.000|
+TCK         |   10.992(R)|clk_BUFGP         |   0.000|
+TMS         |    9.945(R)|clk_BUFGP         |   0.000|
+state_led1  |    7.988(R)|clk_BUFGP         |   0.000|
+state_led2  |    9.903(R)|clk_BUFGP         |   0.000|
+state_led3  |    8.071(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -66,26 +66,26 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.650|         |         |         |
+clk            |    4.498|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-reset          |TRST           |    9.284|
-reset          |reset_led      |    8.515|
+reset          |TRST           |    7.075|
+reset          |reset_led      |    4.977|
 ---------------+---------------+---------+
 
 
-Analysis completed Thu Apr 24 10:01:53 2014 
+Analysis completed Sat Apr 26 09:42:33 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 164 MB
+Peak Memory Usage: 166 MB
 
 
 

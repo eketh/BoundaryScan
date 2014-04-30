@@ -1,20 +1,20 @@
 //! **************************************************************************
-// Written by: Map P.68d on Thu Apr 24 10:01:24 2014
+// Written by: Map P.68d on Sat Apr 26 09:42:08 2014
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "clk" LOCATE = SITE "C9" LEVEL 1;
-COMP "TRST" LOCATE = SITE "F7" LEVEL 1;
-COMP "TCK" LOCATE = SITE "C5" LEVEL 1;
-COMP "state_led1" LOCATE = SITE "D11" LEVEL 1;
-COMP "state_led2" LOCATE = SITE "C11" LEVEL 1;
-COMP "state_led3" LOCATE = SITE "F11" LEVEL 1;
-COMP "TMS" LOCATE = SITE "A6" LEVEL 1;
-COMP "trigger" LOCATE = SITE "L14" LEVEL 1;
-COMP "button" LOCATE = SITE "L13" LEVEL 1;
-COMP "reset" LOCATE = SITE "N17" LEVEL 1;
-COMP "SWD_out" LOCATE = SITE "B6" LEVEL 1;
-COMP "reset_led" LOCATE = SITE "F9" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "TRST" LOCATE = SITE "P18" LEVEL 1;
+COMP "TCK" LOCATE = SITE "J13" LEVEL 1;
+COMP "state_led1" LOCATE = SITE "K15" LEVEL 1;
+COMP "state_led2" LOCATE = SITE "R4" LEVEL 1;
+COMP "state_led3" LOCATE = SITE "J14" LEVEL 1;
+COMP "TMS" LOCATE = SITE "M18" LEVEL 1;
+COMP "trigger" LOCATE = SITE "L13" LEVEL 1;
+COMP "button" LOCATE = SITE "R17" LEVEL 1;
+COMP "reset" LOCATE = SITE "G18" LEVEL 1;
+COMP "SWD_out" LOCATE = SITE "K14" LEVEL 1;
+COMP "reset_led" LOCATE = SITE "J15" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

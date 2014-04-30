@@ -1,0 +1,102 @@
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+xst -intstyle ise -ifn "C:/sw_repo/Soft/WIP/STM_SWD.xst" -ofn "C:/sw_repo/Soft/WIP/STM_SWD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc3s500e-fg320-5 STM_SWD.ngc STM_SWD.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o STM_SWD_map.ncd STM_SWD.ngd STM_SWD.pcf 
+par -w -intstyle ise -ol high -t 1 STM_SWD_map.ncd STM_SWD.ncd STM_SWD.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml STM_SWD.twx STM_SWD.ncd -o STM_SWD.twr STM_SWD.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f STM_SWD.ut STM_SWD.ncd 

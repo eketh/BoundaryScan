@@ -1,5 +1,13 @@
 *******************************************************************************************************************
 *******************************************************CHANGELOG***************************************************
+29 IV 2014
+
+"Note: After reset and jtag-to-swd sequence SWDIOTMS line must be driven low with at least one clock pulse on SWCLK line, otherwise target will not respond to any request! JTAG-TO-SWD sequence presented by ARM is incomplete and will not work without IDLE cycle. It is good to implement IDLE command that consists of SWDIOTMS line set low with 8 clock pulses on SWCLK line (kind of request with 0x00 payload) that will allow SW-DP to successfully complete commands execution when appended at the end of long queue or reset sequences. "
+
+Screw you, ARM.
+
+*******************************************************************************************************************
+
 15 III 2014
 
 1) Added separate chapter about 1532 (in Doc/Appendix).

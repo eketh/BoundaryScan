@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
 --**********************************************************************************************************************************************************
--- PORTS
+-- PORTS (JTAG)
 -- clk, reset - generic clock and generic reset (or rather nreset because it is active low).
 -- trigger - input that triggers testing process. Probably it will be some button.
 -- TDO_jtag: data received from TDO pin of JTAG.
@@ -13,13 +13,9 @@ use ieee.std_logic_unsigned.all;
 -- TRST - active low reset signal sent to JTAG.
 -- TCK - clock signal sent to JTAG.
 --**********************************************************************************************************************************************************
--- 22 IV 2014
---
--- Defeated my laziness and started writing module for rapid prototyping of SWD protocol.
--- Worship me.
---**********************************************************************************************************************************************************
 -- For SWD, we connect only TCK and TMS, ignoring other pins.
--- Left them just in case.
+-- Left and outcommented them just in case.
+-- TMS set to inout.
 --**********************************************************************************************************************************************************
 -- VARIA
 -- JTAG-to-SWD sequence is, according to ST's manual (RM0090, a.k.a. Mother Of All ST Manuals):
@@ -27,31 +23,41 @@ use ieee.std_logic_unsigned.all;
 -- 2. Send the 16-bit sequence on TMS (SWDIO) = 0111100111100111 (MSB transmitted first)
 -- 3. Send more than 50 TCK cycles with TMS (SWDIO) = 1
 -- Marked this as ToSwd to maintain the naming convence
+-- PS Now code is in its "battlefield" version, but it will be refractored from JTAG signals once it starts to work properly.
+-- 29 IV added Idle command (8 SWCLK pulses with TMS set to 0). Check whether it should be *after* 16 bits of JTAG-TO-SWD sequence or after the whole JTAG-
+-- to-SWD cycle (more than 50 '1's, 16-bit sequence, more than 50 '1's @ SWDIO).
+-- C'mon, no one reads these comments.
+--**********************************************************************************************************************************************************
+-- CONNECTION TO SWD header
+-- 1- ???, 2- TCK, 3- GND, 4- TMS, 5-NRST, 6- TSWO
 --**********************************************************************************************************************************************************
 
-entity STM_Quartus is
+entity STM_SWD is
 port(
   clk : in std_logic;
   reset : in std_logic;
   trigger : in std_logic;
   button : in std_logic;
+  test	: in std_logic;
+  test_out : out std_logic;
 --  TDO_jtag: in std_logic;
 --  TDI_jtag: out std_logic;
   TMS : inout std_logic; --inout for SWD
-  TRST : out std_logic;
+  nTRST : out std_logic;
   TCK : out std_logic;
 --  TDO_led: out std_logic;
   reset_led : out std_logic;
   state_led1 : out std_logic;
   state_led2 : out std_logic;
   state_led3 : out std_logic;
+  
 -- Output port capturing inout's response
--- may not be needed!
+-- (may not be needed)
   SWD_out : out std_logic
 );
-end STM_Quartus;
+end STM_SWD;
 
-architecture STMTest_a of STM_Quartus is
+architecture STM_SWD_a of STM_SWD is
 
 type states is (sReset, sRun, sDataReg);
 signal state, next_state: states;
@@ -64,15 +70,16 @@ signal state, next_state: states;
 --constant DRtoIR: std_logic_vector(0 to 5):= "111100";
 
 --constant ILength: integer := 3;
-constant RunLength: integer:= 143;
+constant RunLength: integer:= 151;
 
 --constant IRData1: std_logic_vector (0 to ILength):= "1100";-- 3=IDCODE
 --constant IRData2: std_logic_vector (0 to ILength):= "110111111";-- APACC
 
-constant Zeros: std_logic_vector(0 to 59) := "000000000000000000000000000000000000000000000000000000000000"; -- czy da sie to robic nie w tak lopatologiczny sposob? 
+constant Zeros: std_logic_vector(0 to 59) := "000000000000000000000000000000000000000000000000000000000000";
 constant SWDSeq: std_logic_vector (0 to 15) := "0111100111100111"; -- MSB first - this may be cumbersome...
-constant IDCode: std_logic_vector (0 to 7) := "10100100"; -- DP access, read, register 0x00 = IDCODE
+constant IDCode: std_logic_vector (0 to 7) := "10100101"; -- DP access, read, register 0x00 = IDCODE
 constant ToSWD: std_logic_vector (0 to 135) := NOT Zeros & SWDSeq & NOT Zeros;
+constant Idle: std_logic_vector (0 to 7) := "00000000"; -- 8 idle clock cycles after JTAG-to-SWD sequence are recommended
 
 -- For future applications: read processor ID
 -- based on captured data saved in swd_tek2_marked.png
@@ -91,14 +98,14 @@ constant ReadDPBuffer: std_logic_vector (0 to 7) := "10111101";
 
 
 
-constant data_TMS: std_logic_vector (0 to RunLength):= ToSWD & IDCode;-- & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoIR & zeros(0 to ILength) & IRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR;
+constant data_TMS: std_logic_vector (0 to RunLength):= ToSWD & Idle & IDCode;-- & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoIR & zeros(0 to ILength) & IRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR & zeros(0 to 35) & DRtoDR;
 
 --constant data_TDI: std_logic_vector (0 to RunLength):= Zeros(0 to 10) & IRData1 & zeros(0 to 3);-- & DPData1 & zeros(0 to 4) & DPData2 & zeros(0 to 5) & IRData2 & zeros(0 to 4) & APData1 & Zeros (0 to 4) & APData2 & Zeros (0 to 4) & APData3 & Zeros (0 to 4) & APData4 & Zeros (0 to 4) & APData4 & Zeros (0 to 4) & APData4 & Zeros (0 to 4)  & APData4 & Zeros (0 to 3);
 
 --prescaler values for TCK.
-constant max_prescaler: integer := 49;
-constant half_prescaler: integer := 24;
-constant shift_prescaler: integer := 36; -- some value "considered safe" where shift register is shifted
+constant max_prescaler: integer := 4900000;
+constant half_prescaler: integer := 2400000;
+constant shift_prescaler: integer := 3600000; -- some value "considered safe" where shift register is shifted
 
 signal clk_prescaler: integer range max_prescaler downto 0;
 
@@ -219,14 +226,14 @@ end process datareg;
 
 sTCK <= '0' when (state /= sReset and clk_prescaler<half_prescaler) else '1';
 TCK <= sTCK;
-TRST <= reset;
+nTRST <= reset;
 --TDO_led<=TDO_jtag;
 reset_led <= reset;
-state_led1 <= '1' when (state=sReset) else '0';
-state_led2 <= '1' when (state=sRun) else '0';
-state_led3 <= '1' when (state=sDataReg) else '0';
-
+state_led1 <= sTCK;
+state_led2 <= TMS;
+state_led3 <= button;
+test_out<=test;
 --TMS<= data_TMS(bit_count);
 --TDI_jtag<= data_TDI(bit_count);
 
-end STMTest_a;
+end STM_SWD_a;

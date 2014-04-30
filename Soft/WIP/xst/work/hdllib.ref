@@ -1,6 +1,8 @@
 EN stmtest NULL C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl00 1392136346
-AR stm_quartus stmtest_a C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl05 1398326346
+AR stm_quartus stmtest_a C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl05 1398497453
 AR stmtest_quartus stmtest_a C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl03 1392241309
-EN stm_quartus NULL C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl04 1398326345
+EN stm_quartus NULL C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl04 1398497452
 AR stmtest stmtest_a C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl01 1392136347
+EN stm_swd NULL C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl06 1398756067
+AR stm_swd stm_swd_a C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl07 1398756068
 EN stmtest_quartus NULL C:/sw_repo/Soft/WIP/STMTest.vhd sub00/vhpl02 1392241308
