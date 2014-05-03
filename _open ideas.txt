@@ -7,3 +7,20 @@ Wstep:
 - b. duzo fragmentarycznej, rozproszonej wiedzy
 - b. duzo projektów open source, szeroki rynek
 - pewny rozwój branzy wraz z rozwojem technologii
+---
+
+Cel:
+
+- zebranie rozproszonej wiedzy o wielu zagadnieniach koniecznych do zrozumienia dzialania JTAGa,
+- pokazanie, ze jtag ewoluuje i dostosowuje sie do wymagan rynku, zapewniajac np. konkretne funkcjonalnosci (albo je ulatwiajac - tu przydalaby sie tabelka typu MARKET DEMAND - JTAG SOLUTION - STANDARD ) albo konkretne interfejsy (np. 2-pinowy),
+- pokazanie, ze jtag wciaz nie jest w ostatecznej formie - P1687
+
+co do czesci wlasciwej-pomiarowej:
+
+- pokazanie zastosowania metod opisanych we wstepie: programowanie -> odczytywanie IDCODE, ustawianie BYPASS, zapisywanie FLASHa, zaimplementowanie TAPa, zaimplementowanie programatora korzystajacego z SWD, reverse engineering SWD.Przy reverse engineeringu opis tego, co nalezy brac pod uwage (timingi itp.)
+
+
+---
+INNE:
+
+- rozdzial o BSDL: moze do appendiksa? (zapytac doktora)
