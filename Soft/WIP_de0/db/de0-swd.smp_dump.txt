@@ -1,0 +1,6 @@
+
+State Machine - |STM_SWD|state
+Name state.sDataReg state.sRun state.snreset 
+state.snreset 0 0 0 
+state.sRun 0 1 1 
+state.sDataReg 1 0 1 

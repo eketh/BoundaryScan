@@ -301,6 +301,8 @@
     <transform xil_pn:end_ts="1398764104" xil_pn:in_ck="181672816083792974" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1398764101">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1395599658" xil_pn:in_ck="3016213707803120171" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-2312317930941348808" xil_pn:start_ts="1395599658">
       <status xil_pn:value="AbortedRun"/>
