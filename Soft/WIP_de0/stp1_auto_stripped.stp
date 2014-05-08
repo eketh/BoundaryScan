@@ -68,11 +68,13 @@
         <trigger_in_editor/>
         <trigger_out_editor/>
       </presentation>
-      <trigger CRC="3F3DD926" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2014/05/08 00:38:25  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="8192" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+      <trigger CRC="3F3DD926" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2014/05/08 00:38:25  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="8192" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
         <events use_custom_flow_control="no">
-          <level enabled="yes" name="condition1" type="basic"><power_up enabled="yes">
-            </power_up><op_node/>
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
           </level>
         </events>
         <storage_qualifier_events>
@@ -783,6 +785,7 @@ vxPbWxxxa9bvRNeicYqq3YnmpWgjyuHfmSO73no377XgXN7zze1Q7N6uzTto
 refnwXPVYtsJU39Btftv9wu1rvq++s764I9Xq9WXX61WX7z56hdf/uztT948
 PWT+/s//AwP5CtI=
 
+    
     
     
     
@@ -2169,6 +2172,7 @@ eq+r0yHbf1zVJ2jPv5bP2Z5/m895d0q6Fz4/QXa9nNZD7fS2X1SnpLaN91n3
 fP0v++vPvlcbxF5rez3Yhha7QZj6G6qdf/tvqHXox+qH64NfFEXxi98Uxedf
 Pvz8l1/++uGLzUXm+x/+D0SJp0M=
 
+    
     
     
     
