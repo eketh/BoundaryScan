@@ -1,0 +1,7 @@
+vhdl work "cortex_data.vhd"
+vhdl work "InstructionRegister.vhd"
+vhdl work "CortexIDRegister.vhd"
+vhdl work "boundary_scan_device.vhd"
+vhdl work "Top.vhd"
+vhdl work "JTAGTop.vhd"
+vhdl work "Top_Top.vhd"

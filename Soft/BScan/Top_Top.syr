@@ -1,0 +1,183 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.37 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.37 secs
+ 
+--> Reading design: Top_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Top_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/CortexTop is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/Top.vhd", and is now defined in "C:/sw_repo/Soft/BScan/Top.vhd".
+WARNING:HDLParsers:3607 - Unit work/CortexTop/Top_a is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/Top.vhd", and is now defined in "C:/sw_repo/Soft/BScan/Top.vhd".
+WARNING:HDLParsers:3607 - Unit work/TAP is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/boundary_scan_device.vhd", and is now defined in "C:/sw_repo/Soft/BScan/boundary_scan_device.vhd".
+WARNING:HDLParsers:3607 - Unit work/TAP/TAP_a is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/boundary_scan_device.vhd", and is now defined in "C:/sw_repo/Soft/BScan/boundary_scan_device.vhd".
+WARNING:HDLParsers:3607 - Unit work/CortexIDRegister is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/CortexIDRegister.vhd", and is now defined in "C:/sw_repo/Soft/BScan/CortexIDRegister.vhd".
+WARNING:HDLParsers:3607 - Unit work/CortexIDRegister/Behavioral is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/CortexIDRegister.vhd", and is now defined in "C:/sw_repo/Soft/BScan/CortexIDRegister.vhd".
+WARNING:HDLParsers:3607 - Unit work/cortex_data is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/cortex_data.vhd", and is now defined in "C:/sw_repo/Soft/BScan/cortex_data.vhd".
+WARNING:HDLParsers:3607 - Unit work/cortex_data is now defined in a different file.  It was defined in "C:/!DYPLOM/BScan/cortex_data.vhd", and is now defined in "C:/sw_repo/Soft/BScan/cortex_data.vhd".
+Compiling vhdl file "C:/sw_repo/Soft/BScan/cortex_data.vhd" in Library work.
+Architecture cortex_data of Entity cortex_data is up to date.
+Compiling vhdl file "C:/sw_repo/Soft/BScan/boundary_scan_device.vhd" in Library work.
+Entity <tap> compiled.
+Entity <tap> (Architecture <tap_a>) compiled.
+Compiling vhdl file "C:/sw_repo/Soft/BScan/CortexIDRegister.vhd" in Library work.
+Entity <cortexidregister> compiled.
+Entity <cortexidregister> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/sw_repo/Soft/BScan/InstructionRegister.vhd" in Library work.
+Entity <JTAGIDRegister> compiled.
+Entity <JTAGIDRegister> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/sw_repo/Soft/BScan/JTAGTop.vhd" in Library work.
+ERROR:HDLParsers:3011 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 13. End Identifier JATGTop does not match declaration, JTAGTop.
+ERROR:HDLParsers:3010 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 15. Entity JTAGTop does not exist.
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 20. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 20. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 40. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 40. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 57. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 57. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'sTMS'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. sTMS: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'sTCK'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. sTCK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'TRST'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. TRST: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'CLOCKIR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. CLOCKIR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'UPDATEIR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. UPDATEIR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'SHIFTIR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. SHIFTIR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'TRESET'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. TRESET: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'TSELECT'.  Should it be: SELECT?
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. TSELECT: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'ENABLE'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. ENABLE: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'SHIFTDR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. SHIFTDR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'UPDATEDR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. UPDATEDR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'CLOCKDR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. CLOCKDR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'CAPTUREDR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. CAPTUREDR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. Undefined symbol 'CAPTUREIR'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 61. CAPTUREIR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 63. Undefined symbol 'sTDI'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 63. sTDI: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 63. Undefined symbol 'sTDO'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 63. sTDO: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 66. Undefined symbol 'TDI'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 66. TDI: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 67. Undefined symbol 'TDO'.  Should it be: TO?
+ERROR:HDLParsers:3313 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 68. Undefined symbol 'TMS'.  Should it be: MS?
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 68. TMS: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 69. Undefined symbol 'TCK'.  Should it be: aCK?
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 69. TCK: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 70. Undefined symbol 'reset'.
+ERROR:HDLParsers:1209 - "C:/sw_repo/Soft/BScan/JTAGTop.vhd" Line 70. reset: Undefined symbol (last report in this block)
+--> 
+
+Total memory usage is 245712 kilobytes
+
+Number of errors   :   49 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

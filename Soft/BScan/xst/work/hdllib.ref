@@ -1,6 +1,8 @@
-EN tap NULL C:/!DYPLOM/BScan/boundary_scan_device.vhd sub00/vhpl00 1384705698
-PH cortex_data NULL C:/!DYPLOM/BScan/cortex_data.vhd sub00/vhpl03 1384705880
-AR cortexidregister behavioral C:/!DYPLOM/BScan/CortexIDRegister.vhd sub00/vhpl05 1384705883
-EN cortexidregister NULL C:/!DYPLOM/BScan/CortexIDRegister.vhd sub00/vhpl02 1384705882
-PB cortex_data cortex_data C:/!DYPLOM/BScan/cortex_data.vhd sub00/vhpl04 1384705881
-AR tap tap_a C:/!DYPLOM/BScan/boundary_scan_device.vhd sub00/vhpl01 1384705699
+EN jtagidregister NULL C:/sw_repo/Soft/BScan/InstructionRegister.vhd sub00/vhpl06 1402124619
+EN tap NULL C:/sw_repo/Soft/BScan/boundary_scan_device.vhd sub00/vhpl00 1402124615
+AR jtagidregister behavioral C:/sw_repo/Soft/BScan/InstructionRegister.vhd sub00/vhpl07 1402124620
+PH cortex_data NULL C:/sw_repo/Soft/BScan/cortex_data.vhd sub00/vhpl03 1402124613
+AR cortexidregister behavioral C:/sw_repo/Soft/BScan/CortexIDRegister.vhd sub00/vhpl05 1402124618
+EN cortexidregister NULL C:/sw_repo/Soft/BScan/CortexIDRegister.vhd sub00/vhpl02 1402124617
+PB cortex_data cortex_data C:/sw_repo/Soft/BScan/cortex_data.vhd sub00/vhpl04 1402124614
+AR tap tap_a C:/sw_repo/Soft/BScan/boundary_scan_device.vhd sub00/vhpl01 1402124616

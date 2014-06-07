@@ -23,7 +23,7 @@ TCK: in std_logic;
 TDO: out std_logic;
 reset: in std_logic
 );
-end Top;
+end Top_Top;
 
 architecture Top_Top_a of Top_Top is
 

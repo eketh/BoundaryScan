@@ -1,0 +1,5 @@
+vhdl work "C:\sw_repo\Soft\BScan_BSC\InstructionRegister.vhd"
+vhdl work "C:\sw_repo\Soft\BScan_BSC\bscell.vhd"
+vhdl work "C:\sw_repo\Soft\BScan_BSC\boundary_scan_device.vhd"
+vhdl work "C:\sw_repo\Soft\BScan_BSC\JTAGTop.vhd"
+vhdl work "C:\sw_repo\Soft\BScan_BSC\Top_Top.vhd"

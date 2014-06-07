@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="752" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan_BSC/Top_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">44</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">NDI</arg>&apos; of component &apos;<arg fmt="%s" index="4">JTAGTop</arg>&apos; is tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="752" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan_BSC/Top_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">44</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">MODE</arg>&apos; of component &apos;<arg fmt="%s" index="4">JTAGTop</arg>&apos; is tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan_BSC/Top_Top.vhd</arg>&quot; line <arg fmt="%d" index="2">44</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">NDO</arg>&apos; of component &apos;<arg fmt="%s" index="4">JTAGTop</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan_BSC/InstructionRegister.vhd</arg>&quot; line <arg fmt="%d" index="2">108</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;TDI&gt;</arg>
+</msg>
+
+<msg type="error" file="Xst" num="827" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan_BSC/InstructionRegister.vhd</arg>&quot; line <arg fmt="%d" index="2">59</arg>: Signal <arg fmt="%s" index="3">CurrentInstruction</arg> cannot be synthesized, bad synchronous description. The description style you are using to describe a synchronous element (register, memory, etc.) is not supported in the current software release.
+</msg>
+
+</messages>
+

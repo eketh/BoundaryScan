@@ -1,0 +1,7 @@
+vhdl work "C:\sw_repo\Soft\BScan\cortex_data.vhd"
+vhdl work "C:\sw_repo\Soft\BScan\InstructionRegister.vhd"
+vhdl work "C:\sw_repo\Soft\BScan\CortexIDRegister.vhd"
+vhdl work "C:\sw_repo\Soft\BScan\boundary_scan_device.vhd"
+vhdl work "C:\sw_repo\Soft\BScan\Top.vhd"
+vhdl work "C:\sw_repo\Soft\BScan\JTAGTop.vhd"
+vhdl work "C:\sw_repo\Soft\BScan\Top_Top.vhd"

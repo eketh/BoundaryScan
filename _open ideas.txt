@@ -8,7 +8,7 @@ Wstep:
 - b. duzo projektów open source, szeroki rynek
 - pewny rozwój branzy wraz z rozwojem technologii
 ---
-
+ 
 Cel:
 
 - zebranie rozproszonej wiedzy o wielu zagadnieniach koniecznych do zrozumienia dzialania JTAGa,

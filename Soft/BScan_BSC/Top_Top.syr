@@ -1,0 +1,159 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: Top_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Top_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/sw_repo/Soft/BScan_BSC/boundary_scan_device.vhd" in Library work.
+Architecture tap_a of Entity tap is up to date.
+Compiling vhdl file "C:/sw_repo/Soft/BScan_BSC/InstructionRegister.vhd" in Library work.
+Architecture jtagidregister_a of Entity jtagidregister is up to date.
+Compiling vhdl file "C:/sw_repo/Soft/BScan_BSC/bscell.vhd" in Library work.
+Architecture bscell_a of Entity bscell is up to date.
+Compiling vhdl file "C:/sw_repo/Soft/BScan_BSC/JTAGTop.vhd" in Library work.
+Architecture top_a of Entity jtagtop is up to date.
+Compiling vhdl file "C:/sw_repo/Soft/BScan_BSC/Top_Top.vhd" in Library work.
+Entity <Top_Top> compiled.
+Entity <Top_Top> (Architecture <Top_Top_a>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Top_Top> in library <work> (architecture <Top_Top_a>).
+
+Analyzing hierarchy for entity <JTAGTop> in library <work> (architecture <top_a>).
+
+Analyzing hierarchy for entity <TAP> in library <work> (architecture <tap_a>).
+
+Analyzing hierarchy for entity <JTAGIDRegister> in library <work> (architecture <jtagidregister_a>).
+
+Analyzing hierarchy for entity <bscell> in library <work> (architecture <bscell_a>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Top_Top> in library <work> (Architecture <Top_Top_a>).
+WARNING:Xst:752 - "C:/sw_repo/Soft/BScan_BSC/Top_Top.vhd" line 44: Unconnected input port 'NDI' of component 'JTAGTop' is tied to default value.
+WARNING:Xst:752 - "C:/sw_repo/Soft/BScan_BSC/Top_Top.vhd" line 44: Unconnected input port 'MODE' of component 'JTAGTop' is tied to default value.
+WARNING:Xst:753 - "C:/sw_repo/Soft/BScan_BSC/Top_Top.vhd" line 44: Unconnected output port 'NDO' of component 'JTAGTop'.
+Entity <Top_Top> analyzed. Unit <Top_Top> generated.
+
+Analyzing Entity <JTAGTop> in library <work> (Architecture <top_a>).
+Entity <JTAGTop> analyzed. Unit <JTAGTop> generated.
+
+Analyzing Entity <TAP> in library <work> (Architecture <tap_a>).
+Entity <TAP> analyzed. Unit <TAP> generated.
+
+Analyzing Entity <JTAGIDRegister> in library <work> (Architecture <jtagidregister_a>).
+WARNING:Xst:819 - "C:/sw_repo/Soft/BScan_BSC/InstructionRegister.vhd" line 108: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <TDI>
+ERROR:Xst:827 - "C:/sw_repo/Soft/BScan_BSC/InstructionRegister.vhd" line 59: Signal CurrentInstruction cannot be synthesized, bad synchronous description. The description style you are using to describe a synchronous element (register, memory, etc.) is not supported in the current software release.
+--> 
+
+Total memory usage is 251636 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

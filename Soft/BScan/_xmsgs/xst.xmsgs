@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CortexTop</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/Top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/Top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CortexTop/Top_a</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/Top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/Top.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/TAP</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/boundary_scan_device.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/boundary_scan_device.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/TAP/TAP_a</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/boundary_scan_device.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/boundary_scan_device.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CortexIDRegister</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/CortexIDRegister.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/CortexIDRegister.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/CortexIDRegister/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/CortexIDRegister.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/CortexIDRegister.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cortex_data</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/cortex_data.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/cortex_data.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cortex_data</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/!DYPLOM/BScan/cortex_data.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/sw_repo/Soft/BScan/cortex_data.vhd</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3011" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">13</arg>. End Identifier <arg fmt="%s" index="3">JATGTop</arg> does not match declaration, <arg fmt="%s" index="4">JTAGTop</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3010" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">15</arg>. Entity <arg fmt="%s" index="3">JTAGTop</arg> does not exist.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">std_logic</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">std_logic</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">40</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">std_logic</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">40</arg>. <arg fmt="%s" index="3">std_logic</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">std_logic</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">std_logic</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">sTMS</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">sTMS</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">sTCK</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">sTCK</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">TRST</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">TRST</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">CLOCKIR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">CLOCKIR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">UPDATEIR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">UPDATEIR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">SHIFTIR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">SHIFTIR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">TRESET</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">TRESET</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3313" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">TSELECT</arg>&apos;.  Should it be: <arg fmt="%s" index="4">SELECT</arg>?
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">TSELECT</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ENABLE</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">ENABLE</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">SHIFTDR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">SHIFTDR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">UPDATEDR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">UPDATEDR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">CLOCKDR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">CLOCKDR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">CAPTUREDR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">CAPTUREDR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">CAPTUREIR</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">CAPTUREIR</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">sTDI</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. <arg fmt="%s" index="3">sTDI</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">sTDO</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. <arg fmt="%s" index="3">sTDO</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">66</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">TDI</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">66</arg>. <arg fmt="%s" index="3">TDI</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3313" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">67</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">TDO</arg>&apos;.  Should it be: <arg fmt="%s" index="4">TO</arg>?
+</msg>
+
+<msg type="error" file="HDLParsers" num="3313" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">TMS</arg>&apos;.  Should it be: <arg fmt="%s" index="4">MS</arg>?
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. <arg fmt="%s" index="3">TMS</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3313" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">69</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">TCK</arg>&apos;.  Should it be: <arg fmt="%s" index="4">aCK</arg>?
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">69</arg>. <arg fmt="%s" index="3">TCK</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">70</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">reset</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/sw_repo/Soft/BScan/JTAGTop.vhd</arg>&quot; Line <arg fmt="%d" index="2">70</arg>. <arg fmt="%s" index="3">reset</arg>: Undefined symbol (last report in this block)
+</msg>
+
+</messages>
+
